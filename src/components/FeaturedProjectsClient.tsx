@@ -32,7 +32,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
         <motion.div key={project.slug} variants={item}>
           <Link 
             href={`/projects/${project.slug}`} 
-            className="block group relative rounded-[2rem] overflow-hidden bg-bg-secondary border border-white/5 h-full"
+            className="block group relative rounded-2xl sm:rounded-[2rem] overflow-hidden bg-bg-secondary border border-white/5 h-full"
           >
             {project.images?.[0] && (
               <div className="relative aspect-video w-full overflow-hidden">

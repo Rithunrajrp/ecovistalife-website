@@ -49,7 +49,7 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-bg-primary selection:bg-accent selection:text-black">
+    <section ref={containerRef} className="relative h-[100svh] w-full flex items-center justify-center overflow-hidden bg-bg-primary selection:bg-accent selection:text-black">
       
       {/* Dynamic Background Layers */}
       <motion.div 
@@ -73,7 +73,7 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
       <div className="absolute inset-0 z-[5] opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
 
       {/* Main Content Layout */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         {/* Text Side */}
         <div className="lg:col-span-8 flex flex-col items-start text-left">
@@ -93,7 +93,7 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter text-white mb-10 max-w-3xl"
+            className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter text-white mb-6 sm:mb-10 max-w-3xl"
           >
             {heading}
           </motion.h1>
@@ -102,9 +102,9 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12"
+            className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12"
           >
-            <p className="text-white/60 text-lg max-w-md leading-relaxed font-light">
+            <p className="text-white/60 text-base sm:text-lg max-w-md leading-relaxed font-light">
               {body}
             </p>
             {buttons && buttons.length > 0 && (
@@ -140,12 +140,12 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
       </div>
 
       {/* Floating Brand Mark */}
-      <div className="absolute top-12 left-12 z-30 opacity-20 pointer-events-none">
+      <div className="absolute top-12 left-12 z-30 opacity-20 pointer-events-none hidden md:block">
         <img src="/logo.png" alt="EcoVista" className="w-16 grayscale invert" />
       </div>
 
       {/* Modern Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-4 group cursor-pointer">
+      <div className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 z-30 flex-col items-center gap-4 group cursor-pointer hidden sm:flex">
         <span className="text-white/20 group-hover:text-white transition-colors text-[10px] uppercase tracking-[0.5em] font-mono [writing-mode:vertical-rl] rotate-180">Scroll</span>
         <div className="w-px h-16 bg-white/10 relative overflow-hidden">
           <motion.div 

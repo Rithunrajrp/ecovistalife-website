@@ -25,3 +25,11 @@
   z-index: 10000;
   transform: translate(-50%, -50%);
 }
+
+/* Hide on touch devices as a safety net */
+@media (pointer: coarse) {
+  .cursor,
+  .cursorDot {
+    display: none !important;
+  }
+}

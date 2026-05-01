@@ -32,7 +32,7 @@ const FAQ_DATA = [
 
 export default function HomeFAQs() {
   return (
-    <SectionWrapper className="py-32 bg-bg-secondary overflow-hidden">
+    <SectionWrapper className="py-20 sm:py-32 bg-bg-secondary overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -41,8 +41,8 @@ export default function HomeFAQs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Got Questions?</span>
-          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">Frequently Asked Questions</h2>
+          <span className="text-accent uppercase tracking-[0.3em] sm:tracking-[0.4em] text-xs font-bold mb-4 sm:mb-6 block">Got Questions?</span>
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Frequently Asked Questions</h2>
         </motion.div>
 
         {FAQ_DATA.map((group, groupIdx) => (

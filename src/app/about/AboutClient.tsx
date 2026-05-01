@@ -60,8 +60,8 @@ export default function AboutClient() {
       />
 
       {/* Editorial Intro Section */}
-      <SectionWrapper className="pt-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+      <SectionWrapper className="pt-12 sm:pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -69,7 +69,7 @@ export default function AboutClient() {
             viewport={{ once: false, amount: 0.1 }}
             className="lg:col-span-5 relative"
           >
-            <div className="aspect-[4/5] w-full rounded-[2rem] overflow-hidden group">
+            <div className="aspect-[4/5] sm:aspect-[4/5] w-full rounded-2xl sm:rounded-[2rem] overflow-hidden group">
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10" />
               <img 
                 src="https://ecovistalife.in/wp-content/uploads/2024/09/file-20.webp" 
@@ -86,7 +86,7 @@ export default function AboutClient() {
             className="lg:col-span-7"
           >
             <motion.span variants={itemVariants} className="font-mono text-accent text-xs tracking-[0.5em] uppercase mb-8 block">The EcoVista Standard</motion.span>
-            <motion.h2 variants={itemVariants} className="font-heading text-4xl md:text-6xl font-bold mb-10 leading-tight tracking-tighter">
+            <motion.h2 variants={itemVariants} className="font-heading text-3xl sm:text-4xl md:text-6xl font-bold mb-6 sm:mb-10 leading-tight tracking-tighter">
               A Legacy of <br className="hidden md:block" />
               <span className="text-white/40">Trust & Excellence.</span>
             </motion.h2>
@@ -109,26 +109,26 @@ export default function AboutClient() {
       </SectionWrapper>
 
       {/* Manifesto: Vision & Mission */}
-      <SectionWrapper className="py-32">
+      <SectionWrapper className="py-20 sm:py-32">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.1, margin: "-100px" }}
-          className="max-w-7xl mx-auto px-6 md:px-12"
+          className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/5 border border-white/5 rounded-[3rem] overflow-hidden">
-            <motion.div variants={itemVariants} className="bg-bg-secondary p-12 md:p-20 relative group">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/5 border border-white/5 rounded-2xl sm:rounded-[3rem] overflow-hidden">
+            <motion.div variants={itemVariants} className="bg-bg-secondary p-8 sm:p-12 md:p-20 relative group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] -mr-32 -mt-32 transition-opacity duration-700 opacity-0 group-hover:opacity-100" />
               <span className="font-mono text-accent text-xs tracking-[0.4em] uppercase mb-8 block">Our Vision</span>
-              <p className="font-heading text-3xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
+              <p className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
                 To engineer communities where human innovation and environmental stewardship exist in <span className="text-white/40 italic">perfect equilibrium</span>.
               </p>
             </motion.div>
-            <motion.div variants={itemVariants} className="bg-bg-secondary p-12 md:p-20 relative group">
+            <motion.div variants={itemVariants} className="bg-bg-secondary p-8 sm:p-12 md:p-20 relative group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] -mr-32 -mt-32 transition-opacity duration-700 opacity-0 group-hover:opacity-100" />
               <span className="font-mono text-accent text-xs tracking-[0.4em] uppercase mb-8 block">Our Mission</span>
-              <p className="font-heading text-3xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
+              <p className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
                 To deliver uncompromising quality through transparent practices, building <span className="text-white/40 italic">sustainable legacies</span> for our clients.
               </p>
             </motion.div>
@@ -137,12 +137,12 @@ export default function AboutClient() {
       </SectionWrapper>
 
       {/* Editorial Core Values (Nested Stagger) */}
-      <SectionWrapper className="py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <SectionWrapper className="py-12 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
           <div className="mb-24 md:flex items-end justify-between border-b border-white/10 pb-10">
             <div>
               <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-4 block">The Foundation</span>
-              <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">Our Core Values.</h2>
+              <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Our Core Values.</h2>
             </div>
             <p className="text-white/40 max-w-sm mt-8 md:mt-0 text-sm leading-relaxed">
               These principles guide every architectural decision, every client interaction, and every brick laid.
@@ -196,7 +196,7 @@ export default function AboutClient() {
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="text-center mb-24">
             <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-4 block">Our Evolution</span>
-            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">A Decade of Growth.</h2>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">A Decade of Growth.</h2>
           </div>
           
           <motion.div 
@@ -213,7 +213,7 @@ export default function AboutClient() {
                 className="relative grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start group"
               >
                 <div className="md:col-span-3 text-left md:text-right overflow-hidden">
-                  <motion.span variants={nestedTextVariants} className="font-heading text-6xl md:text-7xl font-bold text-white/5 group-hover:text-accent transition-colors duration-700 block leading-none">{item.year}</motion.span>
+                  <motion.span variants={nestedTextVariants} className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-white/5 group-hover:text-accent transition-colors duration-700 block leading-none">{item.year}</motion.span>
                 </div>
                 <div className="hidden md:block md:col-span-1 relative h-full flex justify-center mt-4">
                   <motion.div variants={lineVariants} className="w-px bg-white/5 group-hover:bg-accent/30 transition-colors duration-700 absolute top-0" />
@@ -241,7 +241,7 @@ export default function AboutClient() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-20 text-center flex flex-col items-center">
             <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">The Architects</span>
-            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">Leadership.</h2>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Leadership.</h2>
           </div>
           <motion.div 
             variants={containerVariants}
@@ -256,7 +256,7 @@ export default function AboutClient() {
                 variants={itemVariants}
                 className="group cursor-pointer"
               >
-                <div className="aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-white/5 mb-8">
+                <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl sm:rounded-[2rem] border border-white/5 mb-8">
                   <motion.img 
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
@@ -284,8 +284,8 @@ export default function AboutClient() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl mx-auto text-center px-6"
         >
-          <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8 tracking-tighter">Ready to Build Your Legacy?</h2>
-          <p className="text-xl text-white/50 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8 tracking-tighter">Ready to Build Your Legacy?</h2>
+          <p className="text-base sm:text-xl text-white/50 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-light">
             Join hundreds of happy families who have chosen EcoVistaLife for their dream home.
           </p>
           <div className="flex justify-center">

@@ -77,7 +77,7 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
 
   return (
-    <section ref={container} className="relative min-h-[120vh] flex items-center justify-center overflow-hidden px-6 md:px-12">
+    <section ref={container} className="relative min-h-[80vh] lg:min-h-[120vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         
         {/* Project Image Panel */}
@@ -87,7 +87,7 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
         )}>
           <motion.div 
             style={{ scale }}
-            className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/3] rounded-[4rem] overflow-hidden shadow-2xl group border border-white/5"
+            className="relative aspect-[4/3] sm:aspect-square lg:aspect-[4/3] rounded-2xl sm:rounded-[3rem] lg:rounded-[4rem] overflow-hidden shadow-2xl group border border-white/5"
           >
             <motion.img 
               style={{ y }}
@@ -114,16 +114,16 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
         {/* Project Text Panel */}
         <div className={cn(
           "lg:col-span-5 relative z-20",
-          index % 2 !== 0 ? "lg:order-1 text-right lg:items-end" : ""
+          index % 2 !== 0 ? "lg:order-1 lg:text-right lg:items-end" : ""
         )}>
           <motion.div
             initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className={cn("flex flex-col", index % 2 !== 0 ? "items-end" : "items-start")}
+            className={cn("flex flex-col", index % 2 !== 0 ? "lg:items-end" : "items-start")}
           >
-            <div className="font-mono text-accent text-6xl md:text-8xl opacity-10 mb-6 font-bold">
+            <div className="font-mono text-accent text-5xl sm:text-6xl md:text-8xl opacity-10 mb-4 sm:mb-6 font-bold">
               {project.id}
             </div>
             
@@ -131,18 +131,18 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
               {project.subtitle}
             </span>
             
-            <h2 className="font-heading text-6xl md:text-8xl font-bold text-white mb-8 tracking-tighter leading-none">
+            <h2 className="font-heading text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tighter leading-none">
               {project.title}
             </h2>
             
             <p className={cn(
-              "text-white/60 text-lg md:text-xl leading-relaxed font-light mb-12 max-w-lg",
-              index % 2 !== 0 ? "text-right" : ""
+              "text-white/60 text-base sm:text-lg md:text-xl leading-relaxed font-light mb-8 sm:mb-12 max-w-lg",
+              index % 2 !== 0 ? "lg:text-right" : ""
             )}>
               {project.description}
             </p>
 
-            <div className={cn("flex flex-wrap gap-4", index % 2 !== 0 ? "justify-end" : "justify-start")}>
+            <div className={cn("flex flex-wrap gap-3 sm:gap-4", index % 2 !== 0 ? "lg:justify-end" : "justify-start")}>
               <Link href={`/projects/${project.slug}`}>
                 <MagneticButton className="px-8 py-4 text-xs uppercase tracking-widest">
                   View Project

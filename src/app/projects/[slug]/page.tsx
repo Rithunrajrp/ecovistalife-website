@@ -138,9 +138,25 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = await getProject(slug);
+  
+  if (!project) {
+    return {
+      title: 'Project Not Found | EcoVistaLife',
+    };
+  }
+
   return {
-    title: project ? `${project.title} | Projects | EcoVistaLife` : 'Project Not Found | EcoVistaLife',
-    description: project?.description || 'Premium property development in Coimbatore by EcoVistaLife.',
+    title: `${project.title} — Premium Villa Plots in ${project.location || 'Coimbatore'}`,
+    description: project.description || `Explore ${project.title}, a premium gated community by EcoVistaLife in ${project.location || 'Coimbatore'}.`,
+    openGraph: {
+      title: `${project.title} | EcoVistaLife`,
+      description: project.description,
+      url: `https://ecovistalife.in/projects/${slug}`,
+      images: project.images?.[0] ? [{ url: project.images[0] }] : [],
+    },
+    alternates: {
+      canonical: `https://ecovistalife.in/projects/${slug}`,
+    },
   };
 }
 

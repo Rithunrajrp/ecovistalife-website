@@ -65,7 +65,7 @@ export default function ServicesClient() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-20">
             <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-4 block">The Journey</span>
-            <h2 className="font-heading text-4xl md:text-6xl font-bold max-w-3xl leading-tight">Visualizing Your Path to Premium Living.</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-6xl font-bold max-w-3xl leading-tight">Visualizing Your Path to Premium Living.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-[2rem] overflow-hidden border border-white/10">
             {VISUALIZATION_STEPS.map((item, i) => (
@@ -75,9 +75,9 @@ export default function ServicesClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-bg-primary p-10 group hover:bg-bg-secondary transition-colors duration-500 flex flex-col justify-between min-h-[300px]"
+                className="bg-bg-primary p-6 sm:p-10 group hover:bg-bg-secondary transition-colors duration-500 flex flex-col justify-between min-h-[220px] sm:min-h-[300px]"
               >
-                <span className="font-mono text-accent text-6xl font-bold opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 origin-left">{item.step}</span>
+                <span className="font-mono text-accent text-4xl sm:text-6xl font-bold opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 origin-left">{item.step}</span>
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-white mb-4">{item.title}</h3>
                   <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
@@ -95,7 +95,7 @@ export default function ServicesClient() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="mb-16 text-center">
             <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Community Features</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold">EcoVistaLife Amenities</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold">EcoVistaLife Amenities</h2>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

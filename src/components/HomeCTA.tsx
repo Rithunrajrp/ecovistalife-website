@@ -7,16 +7,16 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 
 export default function HomeCTA() {
   return (
-    <SectionWrapper className="py-32">
+    <SectionWrapper className="py-20 sm:py-32">
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="max-w-4xl mx-auto text-center px-6"
+        className="max-w-4xl mx-auto text-center px-4 sm:px-6"
       >
-        <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8">Ready to Build Your Dream?</h2>
-        <p className="text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+        <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8">Ready to Build Your Dream?</h2>
+        <p className="text-base sm:text-xl text-text-secondary mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
           Discover premium, eco-friendly plots and villas in Coimbatore.
           Start your journey towards sustainable luxury living today.
         </p>

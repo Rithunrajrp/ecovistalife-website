@@ -32,8 +32,8 @@ export default function HomeSections({ stats, features, testimonials }: HomeSect
   return (
     <div className="bg-bg-primary">
       {/* Stats Section */}
-      <SectionWrapper className="pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <SectionWrapper className="pt-20 sm:pt-32 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
           {stats.map((stat, i) => (
             <motion.div 
               key={i} 
@@ -57,19 +57,19 @@ export default function HomeSections({ stats, features, testimonials }: HomeSect
       </SectionWrapper>
 
       {/* Features Section */}
-      <SectionWrapper className="py-24 px-4 md:px-12">
-        <div className="max-w-7xl mx-auto bg-bg-secondary rounded-[4rem] p-12 md:p-24 border border-white/5 relative overflow-hidden">
+      <SectionWrapper className="py-16 sm:py-24 px-4 md:px-12">
+        <div className="max-w-7xl mx-auto bg-bg-secondary rounded-2xl sm:rounded-[3rem] lg:rounded-[4rem] p-6 sm:p-12 md:p-24 border border-white/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px] -mr-48 -mt-48" />
           
           <div className="mb-20 relative z-10">
             <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Why EcoVistaLife</span>
-            <h2 className="font-heading text-5xl md:text-7xl font-bold max-w-3xl leading-none tracking-tighter">
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold max-w-3xl leading-none tracking-tighter">
               Crafting Excellence. <br />
               <span className="text-white/20">Delivering Trust.</span>
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-2xl sm:rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl">
             {features.map((feature, i) => (
               <FeatureCard key={i} index={i} feature={feature} />
             ))}
@@ -79,10 +79,10 @@ export default function HomeSections({ stats, features, testimonials }: HomeSect
 
       {/* Testimonials */}
       <SectionWrapper className="py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20 text-center flex flex-col items-center">
-            <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Client Stories</span>
-            <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">Voices of Satisfaction.</h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-12 sm:mb-20 text-center flex flex-col items-center">
+            <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-4 sm:mb-6 block">Client Stories</span>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Voices of Satisfaction.</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -93,10 +93,10 @@ export default function HomeSections({ stats, features, testimonials }: HomeSect
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.8 }}
-                className="bg-white/5 border border-white/10 p-10 rounded-[3rem] group hover:bg-accent/5 transition-all duration-700 relative overflow-hidden"
+                className="bg-white/5 border border-white/10 p-6 sm:p-10 rounded-2xl sm:rounded-[3rem] group hover:bg-accent/5 transition-all duration-700 relative overflow-hidden"
               >
                 <div className="absolute -right-10 -top-10 text-[12rem] font-serif text-white/5 group-hover:text-accent/10 transition-colors pointer-events-none">&ldquo;</div>
-                <p className="text-lg leading-relaxed text-white/70 mb-10 relative z-10 font-light italic">"{t.quote}"</p>
+                <p className="text-base sm:text-lg leading-relaxed text-white/70 mb-6 sm:mb-10 relative z-10 font-light italic">"{t.quote}"</p>
                 <div className="flex items-center gap-5">
                   <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent/20 group-hover:border-accent transition-colors p-1">
                     <img src={t.image} alt={t.name} className="w-full h-full object-cover rounded-full" />
@@ -150,7 +150,7 @@ function FeatureCard({ feature, index }: { feature: FeatureItem, index: number }
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-bg-secondary p-12 group hover:bg-white/5 transition-colors duration-700 relative"
+      className="bg-bg-secondary p-8 sm:p-12 group hover:bg-white/5 transition-colors duration-700 relative"
     >
       <motion.div
         initial={{ opacity: 0, x: -20 }}

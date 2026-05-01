@@ -20,8 +20,8 @@ export default function Footer({
       {/* Decorative background element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 mb-16 sm:mb-20">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,8 +29,8 @@ export default function Footer({
             transition={{ duration: 0.8 }}
             className="md:col-span-5"
           >
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">{heading}</h2>
-            <p className="text-text-secondary text-lg leading-relaxed max-w-md mb-8">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">{heading}</h2>
+            <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-md mb-6 sm:mb-8">
               {body}
             </p>
             {image && (
@@ -77,7 +77,7 @@ export default function Footer({
           </motion.div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-secondary">
+        <div className="pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-text-secondary">
           <p>© {new Date().getFullYear()} ECOVISTALIFE. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

@@ -1,14 +1,28 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import styles from './CustomCursor.module.css';
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLDivElement>(null);
+  const [isTouchDevice, setIsTouchDevice] = useState<boolean | null>(null); // null = not yet determined
 
+  // Detect touch device on mount
   useEffect(() => {
+    const isTouch =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(pointer: coarse)').matches;
+
+    setIsTouchDevice(isTouch);
+  }, []);
+
+  // Setup GSAP cursor only after we confirm it's NOT a touch device
+  useEffect(() => {
+    if (isTouchDevice !== false) return; // Wait until confirmed as non-touch
+
     const cursor = cursorRef.current;
     const dot = dotRef.current;
     
@@ -58,7 +72,10 @@ export default function CustomCursor() {
         el.removeEventListener('mouseleave', onMouseLeave);
       });
     };
-  }, []);
+  }, [isTouchDevice]);
+
+  // Don't render anything until we know, or if it's a touch device
+  if (isTouchDevice !== false) return null;
 
   return (
     <>

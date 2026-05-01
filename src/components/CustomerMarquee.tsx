@@ -26,13 +26,13 @@ const row2 = CUSTOMER_IMAGES.slice(8);
 
 export default function CustomerMarquee() {
   return (
-    <div className="w-full py-32 bg-bg-primary overflow-hidden relative border-t border-white/5">
+    <div className="w-full py-20 sm:py-32 bg-bg-primary overflow-hidden relative border-t border-white/5">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-accent/5 blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-20">
         <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Our Community</span>
-        <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">The Faces of EcoVista.</h2>
+        <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">The Faces of EcoVista.</h2>
       </div>
 
       <div className="relative flex flex-col gap-8 md:gap-12 overflow-hidden group/marquee">
@@ -84,9 +84,9 @@ function ImageCard({ src, index }: { src: string, index: number }) {
   
   return (
     <div 
-      className={`relative h-64 md:h-96 w-[280px] md:w-[400px] shrink-0 group perspective-1000 ${rotation} hover:rotate-0 hover:z-30 transition-all duration-500`}
+      className={`relative h-48 sm:h-64 md:h-96 w-[200px] sm:w-[280px] md:w-[400px] shrink-0 group perspective-1000 ${rotation} hover:rotate-0 hover:z-30 transition-all duration-500`}
     >
-      <div className="absolute inset-0 bg-white/5 rounded-[2rem] md:rounded-[3rem] border border-white/10 shadow-2xl overflow-hidden group-hover:border-accent/30 transition-colors duration-500 will-change-transform">
+      <div className="absolute inset-0 bg-white/5 rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] border border-white/10 shadow-2xl overflow-hidden group-hover:border-accent/30 transition-colors duration-500 will-change-transform">
         
         <Image 
           src={src} 

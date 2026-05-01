@@ -88,7 +88,7 @@ export default function ProjectClient({
     <main ref={containerRef} className="bg-bg-primary min-h-screen selection:bg-accent selection:text-black">
       
       {/* Cinematic Hero */}
-      <div className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+      <div className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center">
         <motion.div 
           style={{ scale: heroScale, opacity: heroOpacity }} 
           className="absolute inset-0 z-0"
@@ -101,7 +101,7 @@ export default function ProjectClient({
           />
         </motion.div>
 
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 pt-20">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function ProjectClient({
               </span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 leading-[0.9]">
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 sm:mb-8 leading-[0.9]">
               {title.split(' ').map((word, i) => (
                 <span key={i} className="inline-block mr-4">{word}</span>
               ))}
@@ -128,7 +128,7 @@ export default function ProjectClient({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="text-white/60 text-xl md:text-2xl max-w-2xl leading-relaxed font-light"
+              className="text-white/60 text-base sm:text-xl md:text-2xl max-w-2xl leading-relaxed font-light"
             >
               {description}
             </motion.p>
@@ -140,7 +140,7 @@ export default function ProjectClient({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4"
+          className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 flex-col items-center gap-4 hidden sm:flex"
         >
           <span className="text-white/20 text-[10px] uppercase tracking-[0.5em] rotate-90 mb-8">Explore</span>
           <div className="w-px h-12 bg-gradient-to-b from-accent to-transparent" />
@@ -149,14 +149,14 @@ export default function ProjectClient({
 
       {/* Project Overview & Features */}
       <SectionWrapper className="relative z-30 pt-0">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
             
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-20">
               
               {/* Features Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/5 border border-white/5 rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/5 border border-white/5 rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl">
                 <FeatureCard label="Location" value={location} />
                 <FeatureCard label="Plot Sizes" value={plotSizes} />
                 <FeatureCard label="Price Range" value={priceRange} />
@@ -213,7 +213,7 @@ export default function ProjectClient({
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="bg-bg-secondary p-10 rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden group"
+                  className="bg-bg-secondary p-6 sm:p-10 rounded-2xl sm:rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden group"
                 >
                   <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                     <img src="/logo.png" alt="EcoVista" className="w-24 invert" />
@@ -240,7 +240,7 @@ export default function ProjectClient({
                   </Link>
                 </motion.div>
 
-                <div className="p-10 rounded-[3rem] bg-accent/5 border border-accent/10 flex items-center justify-between">
+                <div className="p-6 sm:p-10 rounded-2xl sm:rounded-[3rem] bg-accent/5 border border-accent/10 flex items-center justify-between">
                   <div>
                     <p className="text-accent text-xs uppercase tracking-widest mb-1">Direct Line</p>
                     <p className="text-white font-heading font-bold text-2xl">+91 97877 95555</p>
@@ -255,11 +255,11 @@ export default function ProjectClient({
       {/* Modern Gallery Section */}
       {images.length > 0 && (
         <SectionWrapper className="bg-bg-secondary rounded-t-[5rem] mt-20">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
               <div className="max-w-2xl">
                 <span className="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Visual Journey</span>
-                <h3 className="font-heading text-5xl md:text-7xl font-bold text-white leading-none">The Project Gallery</h3>
+                <h3 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-none">The Project Gallery</h3>
               </div>
               <p className="text-white/40 max-w-sm text-sm uppercase tracking-widest leading-loose">
                 Every corner of {title} is designed with precision and natural harmony.
@@ -275,7 +275,7 @@ export default function ProjectClient({
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: i * 0.1 }}
                   className={cn(
-                    "relative overflow-hidden rounded-[2.5rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
+                    "relative overflow-hidden rounded-2xl sm:rounded-[2.5rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
                     i === 0 ? "lg:col-span-2 aspect-[16/9]" : "aspect-[4/5]"
                   )}
                   onClick={() => setLightboxSrc(img)}
@@ -304,10 +304,10 @@ export default function ProjectClient({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-6"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 sm:p-6"
             onClick={() => setLightboxSrc(null)}
           >
-            <button className="absolute top-10 right-10 text-white/60 hover:text-white text-4xl">✕</button>
+            <button className="absolute top-4 right-4 sm:top-10 sm:right-10 text-white/60 hover:text-white text-3xl sm:text-4xl z-10">✕</button>
             <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

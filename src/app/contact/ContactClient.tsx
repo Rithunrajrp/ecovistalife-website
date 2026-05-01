@@ -53,11 +53,11 @@ export default function ContactClient() {
   };
 
   return (
-    <main className="bg-bg-primary min-h-screen pt-20">
+    <main className="bg-bg-primary min-h-screen pt-16 sm:pt-20">
 
 
-      <SectionWrapper className="pt-0 pb-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+      <SectionWrapper className="pt-0 pb-12 sm:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           
           {/* Contact Info */}
           <motion.div 
@@ -67,7 +67,7 @@ export default function ContactClient() {
             className="flex flex-col justify-center"
           >
             <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-6 block">Contact Us</span>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-12 text-white">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 sm:mb-12 text-white">
               Let&apos;s Build Your Dream Together
             </h1>
 
@@ -100,7 +100,7 @@ export default function ContactClient() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="bg-bg-secondary p-8 md:p-12 rounded-[2rem] border border-white/5 relative overflow-hidden"
+            className="bg-bg-secondary p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-[2rem] border border-white/5 relative overflow-hidden"
           >
             <AnimatePresence>
               {isSuccess && (

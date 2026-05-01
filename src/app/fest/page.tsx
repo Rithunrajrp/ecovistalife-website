@@ -56,7 +56,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
   const ref = useRef(null);
   
   return (
-    <SectionWrapper className="py-32 border-b border-white/5 last:border-0 relative overflow-hidden">
+    <SectionWrapper className="py-20 sm:py-32 border-b border-white/5 last:border-0 relative overflow-hidden">
       {/* Chapter Number Background */}
       <div className="absolute top-20 right-0 pointer-events-none opacity-[0.02] select-none">
         <span className="font-heading text-[20rem] font-bold leading-none text-white">
@@ -64,7 +64,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
         </span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           
           {/* Chapter Text */}
@@ -101,7 +101,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }
                 }}
-                className="font-heading text-4xl md:text-6xl font-bold mb-10 text-white leading-tight"
+                className="font-heading text-3xl sm:text-4xl md:text-6xl font-bold mb-8 sm:mb-10 text-white leading-tight"
               >
                 {chapter.title}
               </motion.h2>
@@ -113,7 +113,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                 }}
                 className="space-y-6"
               >
-                <p className="text-text-secondary text-xl leading-relaxed italic border-l-2 border-accent/20 pl-6">
+                <p className="text-text-secondary text-base sm:text-xl leading-relaxed italic border-l-2 border-accent/20 pl-4 sm:pl-6">
                   {chapter.description}
                 </p>
                 <div className="pt-8">
@@ -152,7 +152,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                   }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   className={cn(
-                    "relative aspect-[4/5] overflow-hidden rounded-[2.5rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
+                    "relative aspect-[4/5] overflow-hidden rounded-2xl sm:rounded-[2.5rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
                     idx % 3 === 0 ? "sm:col-span-2 aspect-[16/9]" : ""
                   )}
                   onClick={() => onImageClick(src)}
@@ -224,7 +224,7 @@ export default function FestPage() {
     <main className="bg-bg-primary min-h-screen selection:bg-accent selection:text-black" ref={containerRef}>
       
       {/* Dynamic Hero Section */}
-      <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-[100svh] w-full flex items-center justify-center overflow-hidden">
         <motion.div 
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -239,7 +239,7 @@ export default function FestPage() {
           />
         </motion.div>
         
-        <div className="relative z-20 text-center px-6 max-w-5xl">
+        <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -248,10 +248,10 @@ export default function FestPage() {
             <span className="text-accent uppercase tracking-[0.5em] text-sm font-bold mb-8 block">
               The Grand Event
             </span>
-            <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold mb-8 text-white leading-tight">
+            <h1 className="font-heading text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 sm:mb-8 text-white leading-tight">
               Family <span className="text-transparent stroke-text">Fest</span>
             </h1>
-            <p className="text-text-secondary text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-text-secondary text-base sm:text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
               Experience the story of community, joy, and togetherness. A visual journey through the moments that define EcoVistaLife.
             </p>
           </motion.div>
@@ -260,7 +260,7 @@ export default function FestPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1 }}
-            className="mt-16 flex flex-col items-center"
+            className="mt-12 sm:mt-16 flex-col items-center hidden sm:flex"
           >
             <div className="w-px h-24 bg-gradient-to-b from-accent to-transparent" />
             <span className="text-accent/50 text-xs uppercase tracking-widest mt-4">Scroll to discover</span>

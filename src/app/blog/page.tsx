@@ -6,10 +6,16 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Blog | EcoVistaLife — Real Estate Insights & Sustainable Living',
+  title: 'Journal — Real Estate Insights & Sustainable Living in Coimbatore',
   description: 'Expert insights on sustainable living, eco-friendly homes, real estate investment, and property buying guides from EcoVistaLife Coimbatore.',
+  openGraph: {
+    title: 'Blog | EcoVistaLife',
+    description: 'Expert insights on sustainable living and smart real estate investment in Coimbatore.',
+    url: 'https://ecovistalife.in/blog',
+    images: [{ url: '/Images/Gardenia/IMG_4923.JPG', width: 1200, height: 630, alt: 'EcoVistaLife Blog' }],
+  },
+  alternates: { canonical: 'https://ecovistalife.in/blog' },
 };
-
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
 
 const FALLBACK_BLOGS = [
