@@ -12,7 +12,7 @@ export default function HomeCTA() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as const }}
         className="max-w-4xl mx-auto text-center px-4 sm:px-6"
       >
         <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8">Ready to Build Your Dream?</h2>

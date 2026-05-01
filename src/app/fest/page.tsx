@@ -150,7 +150,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                     hidden: { opacity: 0, y: 40, scale: 0.9 },
                     show: { opacity: 1, y: 0, scale: 1 }
                   }}
-                  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
                   className={cn(
                     "relative aspect-[4/5] overflow-hidden rounded-2xl sm:rounded-[2.5rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
                     idx % 3 === 0 ? "sm:col-span-2 aspect-[16/9]" : ""

@@ -81,7 +81,7 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
             <motion.div
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as const, delay: 0.2 }}
               className="flex items-center gap-4"
             >
               <div className="w-12 h-px bg-accent" />
@@ -92,7 +92,7 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
             className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter text-white mb-6 sm:mb-10 max-w-3xl"
           >
             {heading}
@@ -121,7 +121,7 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
         <motion.div 
           initial={{ opacity: 0, y: 50, rotate: 5 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ duration: 1.5, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.5, delay: 1.5, ease: [0.22, 1, 0.36, 1] as const }}
           className="hidden lg:flex lg:col-span-4 flex-col gap-6"
         >
           <div className="bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[3rem] shadow-2xl relative group">

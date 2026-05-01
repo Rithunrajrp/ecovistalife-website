@@ -37,17 +37,17 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const } }
 };
 
 const nestedTextVariants = {
   hidden: { opacity: 0, x: -20 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
 const lineVariants = {
   hidden: { height: 0 },
-  show: { height: "100%", transition: { duration: 1, ease: "easeInOut" } }
+  show: { height: "100%", transition: { duration: 1, ease: "easeInOut" as const } }
 };
 
 export default function AboutClient() {
@@ -65,7 +65,7 @@ export default function AboutClient() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
             viewport={{ once: false, amount: 0.1 }}
             className="lg:col-span-5 relative"
           >
@@ -165,14 +165,14 @@ export default function AboutClient() {
                 {/* Architectural Line Animation */}
                 <div className="w-full h-px bg-white/5 mb-8 relative overflow-hidden">
                   <motion.div 
-                    variants={{ hidden: { x: "-100%" }, show: { x: "0%", transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } } }} 
+                    variants={{ hidden: { x: "-100%" }, show: { x: "0%", transition: { duration: 1, ease: [0.22, 1, 0.36, 1] as const } } }} 
                     className="absolute inset-0 bg-accent w-1/3" 
                   />
                 </div>
                 
                 <div className="overflow-hidden mb-4">
                   <motion.h3 
-                    variants={{ hidden: { y: "100%" }, show: { y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } } }} 
+                    variants={{ hidden: { y: "100%" }, show: { y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const } } }} 
                     className="font-heading text-2xl md:text-3xl font-bold text-white"
                   >
                     {v.title}
@@ -281,7 +281,7 @@ export default function AboutClient() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as const }}
           className="max-w-4xl mx-auto text-center px-6"
         >
           <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8 tracking-tighter">Ready to Build Your Legacy?</h2>

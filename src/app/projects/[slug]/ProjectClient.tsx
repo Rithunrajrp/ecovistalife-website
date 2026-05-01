@@ -105,7 +105,7 @@ export default function ProjectClient({
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
             className="max-w-4xl"
           >
             <div className="flex flex-wrap items-center gap-4 mb-8">

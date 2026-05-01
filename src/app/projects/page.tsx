@@ -120,7 +120,7 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
             initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as const }}
             className={cn("flex flex-col", index % 2 !== 0 ? "lg:items-end" : "items-start")}
           >
             <div className="font-mono text-accent text-5xl sm:text-6xl md:text-8xl opacity-10 mb-4 sm:mb-6 font-bold">
