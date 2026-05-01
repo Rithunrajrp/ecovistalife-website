@@ -1,10 +1,12 @@
+import Link from 'next/link';
 import Hero from '@/components/Hero';
 import HomeSections from '@/components/HomeSections';
 import Footer from '@/components/Footer';
-import MagneticButton from '@/components/MagneticButton';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import CustomerMarquee from '@/components/CustomerMarquee';
+import HomeFAQs from '@/components/HomeFAQs';
+import HomeCTA from '@/components/HomeCTA';
 
 const STATS = [
   { number: '3+', label: 'Projects' },
@@ -59,19 +61,9 @@ export default function Home() {
 
       <CustomerMarquee />
 
-      {/* CTA Section */}
-      <SectionWrapper className="py-32">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="font-heading text-5xl md:text-7xl font-bold mb-8">Ready to Build Your Dream?</h2>
-          <p className="text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-            Discover premium, eco-friendly plots and villas in Coimbatore.
-            Start your journey towards sustainable luxury living today.
-          </p>
-          <div className="flex justify-center">
-            <MagneticButton>Book a Site Visit</MagneticButton>
-          </div>
-        </div>
-      </SectionWrapper>
+      <HomeFAQs />
+
+      <HomeCTA />
 
       <Footer
         heading="Get In Touch"

@@ -71,34 +71,41 @@ const Card = ({ panel, index, progress, total }: { panel: Panel; index: number; 
   const opacity = useTransform(progress, input, opacityOutput);
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center p-8 md:p-24 shrink-0">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center max-w-7xl mx-auto w-full">
+    <div className="w-screen h-screen flex items-center justify-center shrink-0 relative overflow-hidden group">
+      
+      {/* Immersive Background Image */}
+      {panel.image && (
+        <motion.div 
+          style={{ scale: imageScale, rotate: imageRotate, opacity }}
+          className="absolute inset-0 z-0"
+        >
+           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
+           <div className="absolute inset-0 bg-black/30 z-10 group-hover:bg-transparent transition-colors duration-1000" />
+           <img 
+             src={panel.image} 
+             alt={panel.title} 
+             className="w-full h-full object-cover"
+           />
+        </motion.div>
+      )}
+
+      {/* Foreground Content */}
+      <div className="relative z-20 max-w-7xl mx-auto px-8 md:px-24 w-full h-full flex flex-col justify-end pb-32">
         <motion.div 
           style={{ opacity, y: textY }}
-          className="flex flex-col justify-center"
+          className="max-w-4xl"
         >
-          <span className="text-accent font-mono text-xl md:text-2xl mb-6">0{index + 1}</span>
-          <h3 className="font-heading text-5xl md:text-7xl font-bold mb-8 text-text-primary leading-tight">
+          <div className="flex items-center gap-6 mb-8">
+            <span className="text-accent font-mono text-3xl md:text-5xl font-bold opacity-80">0{index + 1}</span>
+            <div className="h-px w-24 bg-accent/50" />
+          </div>
+          <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold mb-8 text-white leading-none tracking-tighter">
             {panel.title}
           </h3>
-          <p className="text-text-secondary text-lg md:text-xl leading-relaxed max-w-md">
+          <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-2xl font-light backdrop-blur-sm bg-black/10 p-6 rounded-3xl border border-white/5">
             {panel.description}
           </p>
         </motion.div>
-        
-        {panel.image && (
-          <motion.div 
-            style={{ scale: imageScale, rotate: imageRotate, opacity }}
-            className="relative h-[50vh] md:h-[70vh] w-full overflow-hidden rounded-3xl"
-          >
-             <div className="absolute inset-0 bg-black/10 z-10" />
-             <img 
-               src={panel.image} 
-               alt={panel.title} 
-               className="w-full h-full object-cover"
-             />
-          </motion.div>
-        )}
       </div>
     </div>
   );

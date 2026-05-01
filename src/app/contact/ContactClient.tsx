@@ -2,10 +2,19 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import MagneticButton from '@/components/MagneticButton';
 import Footer from '@/components/Footer';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import { cn } from '@/lib/utils';
+
+const CONTACT_FAQS = [
+  { q: "What are your office hours?", a: "Our office is open seven days a week, from Monday to Sunday, 10:00 AM to 06:30 PM. We are also available for private appointments outside of these regular working hours." },
+  { q: "Do you offer virtual consultations?", a: "Absolutely! We offer flexible virtual consultations at a time that works best for you. One of our expert agents will connect with you via phone or Google Meet." },
+  { q: "Which regions do you serve?", a: "We proudly serve the prime areas of Karamadai, Mettupalayam, and Coimbatore. Our dedicated team is here to help you throughout every step of your real estate journey in these locations." },
+  { q: "Do you assist first-time homebuyers or plot buyers?", a: "Yes, we specialize in supporting first-time buyers. Our experienced team will guide you transparently through the entire process of purchasing your first plot or dream home." },
+  { q: "What should I do if I have a concern or complaint?", a: "We take your feedback very seriously. If you have any concerns regarding our properties or services, please contact us immediately via phone or email. We are fully committed to resolving any issues promptly and professionally." }
+];
 
 export default function ContactClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -165,10 +174,39 @@ export default function ContactClient() {
         </div>
       </SectionWrapper>
 
+      {/* FAQs Section */}
+      <SectionWrapper className="bg-bg-primary pt-0 pb-32 overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
+            <span className="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Got Questions?</span>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white">Frequently Asked Questions</h2>
+          </motion.div>
+          <div className="space-y-4">
+            {CONTACT_FAQS.map((faq, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1, ease: "easeOut" }}
+              >
+                <FAQItem question={faq.q} answer={faq.a} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
       <SectionWrapper className="p-0 pb-0">
         <div className="w-full h-[500px] overflow-hidden border-t border-white/5 relative">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.658252277686!2d77.0267231!3d11.0642398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f9a2e639644f%3A0xc3b44b82d921b76e!2sEcoVistaLife!5e0!3m2!1sen!2sin!4v1714575800000!5m2!1sen!2sin" 
+            src="https://maps.google.com/maps?q=60,+60,+Thirumurugan+Nagar+Road,+Thirumurugan+Nagar,+Coimbatore,+Tamil+Nadu+641048,+India&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -200,6 +238,47 @@ function ContactItem({ label, value, isLink = false }: { label: string, value: s
         <p className="text-lg text-white leading-relaxed">{value}</p>
       )}
     </div>
+  );
+}
+
+function FAQItem({ question, answer }: { question: string, answer: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.div 
+      initial={false}
+      className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-bg-secondary border-accent/30' : 'bg-transparent border-white/10 hover:border-white/20'}`}
+    >
+      <button 
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-6 md:px-8 py-6 flex items-center justify-between text-left gap-4"
+      >
+        <span className="font-heading text-lg md:text-xl font-bold text-white pr-8">{question}</span>
+        <motion.div 
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${isOpen ? 'bg-accent text-bg-primary' : 'bg-white/5 text-white'}`}
+        >
+          <ChevronDown size={20} />
+        </motion.div>
+      </button>
+      
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="px-6 md:px-8 pb-8 pt-2 text-text-secondary leading-relaxed">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 }
 

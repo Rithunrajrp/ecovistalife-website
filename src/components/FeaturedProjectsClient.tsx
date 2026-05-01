@@ -26,7 +26,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8"
     >
       {projects.map((project: any) => (
         <motion.div key={project.slug} variants={item}>
@@ -35,7 +35,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
             className="block group relative rounded-[2rem] overflow-hidden bg-bg-secondary border border-white/5 h-full"
           >
             {project.images?.[0] && (
-              <div className="relative aspect-[3/4] w-full overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 transition-opacity duration-500" />
                 <motion.img 
                   whileHover={{ scale: 1.05 }}

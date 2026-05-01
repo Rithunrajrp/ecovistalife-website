@@ -7,6 +7,38 @@ import Footer from '@/components/Footer';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import MagneticButton from '@/components/MagneticButton';
 import { cn } from '@/lib/utils';
+import { 
+  Camera, CloudRain, Lightbulb, Footprints, Activity, 
+  Home, Users, Trophy, Gamepad2, Dumbbell, Shield, 
+  Smile, Database, ShieldCheck, CheckCircle2, ChevronDown
+} from 'lucide-react';
+
+const PROJECT_FAQS = [
+  { q: "Are the properties DTCP/RERA approved?", a: "Yes, all our projects are fully approved by DTCP and RERA, ensuring clear titles and secure investments." },
+  { q: "Do you assist with home loans?", a: "Absolutely. We have tie-ups with all major banks and our CRM team will assist you through the entire loan processing phase." },
+  { q: "What is the handover timeline?", a: "For plots, registration can be done immediately. For custom villas, construction and handover typically take 8 to 12 months." },
+  { q: "Can NRIs buy property here?", a: "Yes, NRIs can seamlessly invest. We offer virtual tours, digital documentation assistance, and dedicated NRI support." }
+];
+
+const getAmenityIcon = (amenity: string) => {
+  const lower = amenity.toLowerCase();
+  const size = 20;
+  if (lower.includes('cctv') || lower.includes('camera')) return <Camera size={size} />;
+  if (lower.includes('water') || lower.includes('drain')) return <CloudRain size={size} />;
+  if (lower.includes('light') || lower.includes('led')) return <Lightbulb size={size} />;
+  if (lower.includes('jogging') || lower.includes('track')) return <Footprints size={size} />;
+  if (lower.includes('yoga') || lower.includes('health')) return <Activity size={size} />;
+  if (lower.includes('gazebo') || lower.includes('seating')) return <Home size={size} />;
+  if (lower.includes('senior') || lower.includes('citizen')) return <Users size={size} />;
+  if (lower.includes('turf') || lower.includes('court')) return <Trophy size={size} />;
+  if (lower.includes('play') || lower.includes('game')) return <Gamepad2 size={size} />;
+  if (lower.includes('gym') || lower.includes('fitness')) return <Dumbbell size={size} />;
+  if (lower.includes('wall') || lower.includes('compound')) return <Shield size={size} />;
+  if (lower.includes('kids') || lower.includes('children')) return <Smile size={size} />;
+  if (lower.includes('tank') || lower.includes('storage')) return <Database size={size} />;
+  if (lower.includes('security') || lower.includes('guard')) return <ShieldCheck size={size} />;
+  return <CheckCircle2 size={size} />;
+};
 
 interface ProjectClientProps {
   title: string;
@@ -39,6 +71,18 @@ export default function ProjectClient({
     : status?.toLowerCase() === 'upcoming'
     ? "bg-purple-500/20 text-purple-300 border-purple-500/30"
     : "bg-emerald-500/20 text-emerald-300 border-emerald-500/30";
+
+  let displayContent = content;
+  let amenitiesList: string[] = [];
+
+  if (content) {
+    const amenityRegex = /<h3>Amenities<\/h3>\s*<p>(.*?)<\/p>/i;
+    const match = content.match(amenityRegex);
+    if (match) {
+      displayContent = content.replace(match[0], '');
+      amenitiesList = match[1].split('•').map(a => a.trim()).filter(Boolean);
+    }
+  }
 
   return (
     <main ref={containerRef} className="bg-bg-primary min-h-screen selection:bg-accent selection:text-black">
@@ -126,10 +170,10 @@ export default function ProjectClient({
                 viewport={{ once: true }}
                 className="prose prose-invert prose-2xl max-w-none"
               >
-                {content ? (
+                {displayContent ? (
                   <div 
                     className="space-y-8 text-white/70 leading-relaxed font-light [&>h2]:text-white [&>h2]:font-heading [&>h2]:text-5xl [&>h2]:font-bold [&>h3]:text-accent [&>h3]:uppercase [&>h3]:tracking-widest [&>h3]:text-sm [&>ul]:grid [&>ul]:grid-cols-1 [&>ul]:md:grid-cols-2 [&>ul]:gap-4 [&>ul]:list-none [&>ul]:p-0 [&>li]:flex [&>li]:items-center [&>li]:gap-3 [&>li]:before:content-['—'] [&>li]:before:text-accent"
-                    dangerouslySetInnerHTML={{ __html: content }} 
+                    dangerouslySetInnerHTML={{ __html: displayContent }} 
                   />
                 ) : (
                   <div className="space-y-8">
@@ -138,6 +182,28 @@ export default function ProjectClient({
                   </div>
                 )}
               </motion.div>
+
+              {/* Amenities Grid */}
+              {amenitiesList.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mt-16"
+                >
+                  <h3 className="font-heading text-3xl font-bold text-white mb-8">Premium Amenities</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    {amenitiesList.map((amenity, idx) => (
+                      <div key={idx} className="bg-white/5 border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center text-center gap-3 hover:bg-white/10 transition-colors group">
+                        <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                          {getAmenityIcon(amenity)}
+                        </div>
+                        <span className="text-white/80 font-medium text-xs">{amenity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
             </div>
 
             {/* Sticky Sidebar */}
@@ -252,6 +318,35 @@ export default function ProjectClient({
         )}
       </AnimatePresence>
 
+      {/* Project FAQs Section */}
+      <SectionWrapper className="bg-bg-primary pt-0 overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
+            <span className="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Got Questions?</span>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white">Frequently Asked Questions</h2>
+          </motion.div>
+          <div className="space-y-4">
+            {PROJECT_FAQS.map((faq, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1, ease: "easeOut" }}
+              >
+                <FAQItem question={faq.q} answer={faq.a} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
       <Footer
         heading="Ready to Build Your Dream?"
         body="Door no. 60/1, 60/2, Thirumurugan Nagar, Krishna Park, Veeriyampalayam Road, Nehru Nagar, Kalapatti, Coimbatore - 641048 | +91 97877 95555 | info@ecovistalife.com"
@@ -269,3 +364,43 @@ const FeatureCard = ({ label, value }: { label: string, value?: string }) => (
     </div>
   </div>
 );
+
+function FAQItem({ question, answer }: { question: string, answer: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.div 
+      initial={false}
+      className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-bg-secondary border-accent/30' : 'bg-transparent border-white/10 hover:border-white/20'}`}
+    >
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-6 md:px-8 py-6 flex items-center justify-between text-left gap-4"
+      >
+        <span className="font-heading text-lg md:text-xl font-bold text-white pr-8">{question}</span>
+        <motion.div 
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${isOpen ? 'bg-accent text-bg-primary' : 'bg-white/5 text-white'}`}
+        >
+          <ChevronDown size={20} />
+        </motion.div>
+      </button>
+      
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="px-6 md:px-8 pb-8 pt-2 text-text-secondary leading-relaxed">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}

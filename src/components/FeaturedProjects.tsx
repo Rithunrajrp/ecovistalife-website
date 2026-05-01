@@ -29,21 +29,14 @@ async function getProjects() {
         images: ['/Images/Mount Shadows/DJI_0301.JPG'],
         status: 'Completed',
       },
-      {
-        slug: 'frenchville',
-        title: 'French Ville',
-        description: 'French-inspired villa plots — launching soon in Karamadai.',
-        images: ['/Images/French Ville/WhatsApp Image 2026-04-10 at 3.05.14 PM.jpeg'],
-        status: 'Upcoming',
-      },
     ];
   }
 }
 
 export default async function FeaturedProjects() {
   let projects = await getProjects();
-  // Only show top 4 featured projects
-  projects = projects.slice(0, 4);
+  // Filter out frenchville and show top 2 featured projects to maximize space
+  projects = projects.filter((p: any) => p.slug !== 'frenchville').slice(0, 2);
 
   return (
     <SectionWrapper className="py-32">

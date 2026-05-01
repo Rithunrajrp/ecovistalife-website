@@ -2,11 +2,8 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import PageHeader from '@/components/ui/PageHeader';
-import SectionWrapper from '@/components/ui/SectionWrapper';
 import { ChevronDown } from 'lucide-react';
+import SectionWrapper from '@/components/ui/SectionWrapper';
 
 const FAQ_DATA = [
   {
@@ -33,53 +30,52 @@ const FAQ_DATA = [
   }
 ];
 
-export default function FAQsPage() {
+export default function HomeFAQs() {
   return (
-    <main className="bg-bg-primary min-h-screen">
-      <Navbar />
-      
-      <PageHeader 
-        label="Got Questions?"
-        title="Frequently Asked Questions"
-        subtitle="Find answers to common questions about our properties, legal approvals, and the home-buying process."
-      />
+    <SectionWrapper className="py-32 bg-bg-secondary overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-20"
+        >
+          <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Got Questions?</span>
+          <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter">Frequently Asked Questions</h2>
+        </motion.div>
 
-      <SectionWrapper className="py-16 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          {FAQ_DATA.map((group, groupIdx) => (
-            <motion.div 
-              key={groupIdx} 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: groupIdx * 0.2, ease: "easeOut" }}
-              className="mb-16 last:mb-0"
-            >
-              <h2 className="font-heading text-2xl font-bold text-white mb-8 flex items-center gap-4">
-                <div className="w-8 h-px bg-accent"></div>
-                {group.category}
-              </h2>
-              
-              <div className="space-y-4">
-                {group.questions.map((faq, faqIdx) => (
-                  <motion.div
-                    key={faqIdx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: (groupIdx * 0.2) + (faqIdx * 0.1), ease: "easeOut" }}
-                  >
-                    <FAQItem question={faq.q} answer={faq.a} />
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </SectionWrapper>
-
-      <Footer heading="Get In Touch"  image="/logo.png" />
-    </main>
+        {FAQ_DATA.map((group, groupIdx) => (
+          <motion.div 
+            key={groupIdx} 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: groupIdx * 0.2, ease: "easeOut" }}
+            className="mb-16 last:mb-0"
+          >
+            <h3 className="font-heading text-2xl font-bold text-white mb-8 flex items-center gap-4">
+              <div className="w-8 h-px bg-accent"></div>
+              {group.category}
+            </h3>
+            
+            <div className="space-y-4">
+              {group.questions.map((faq, faqIdx) => (
+                <motion.div
+                  key={faqIdx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: (groupIdx * 0.2) + (faqIdx * 0.1), ease: "easeOut" }}
+                >
+                  <FAQItem question={faq.q} answer={faq.a} />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </SectionWrapper>
   );
 }
 
@@ -89,7 +85,7 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
   return (
     <motion.div 
       initial={false}
-      className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-bg-secondary border-accent/30' : 'bg-transparent border-white/10 hover:border-white/20'}`}
+      className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-bg-primary border-accent/30' : 'bg-transparent border-white/10 hover:border-white/20'}`}
     >
       <button 
         onClick={() => setIsOpen(!isOpen)}
@@ -122,4 +118,3 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
     </motion.div>
   );
 }
-
