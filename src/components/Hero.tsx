@@ -10,12 +10,24 @@ interface HeroProps {
   heading: string;
   body: string;
   image?: string;
+  images?: string[];
   buttons?: any[];
 }
 
-export default function Hero({ heading, body, image, buttons }: HeroProps) {
+export default function Hero({ heading, body, image, images, buttons }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const bannerImages = images || (image ? [image] : []);
+
+  useEffect(() => {
+    if (bannerImages.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % bannerImages.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, [bannerImages.length]);
   
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -57,12 +69,27 @@ export default function Hero({ heading, body, image, buttons }: HeroProps) {
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-bg-primary z-10" />
-        <motion.img 
-          style={{ x: springX, y: springY }}
-          src={image} 
-          alt="Architectural Masterpiece" 
-          className="w-full h-full object-cover scale-110"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          {bannerImages.map((img, idx) => (
+            <motion.img 
+              key={img}
+              style={{ 
+                x: springX, 
+                y: springY,
+                opacity: currentIndex === idx ? 1 : 0
+              }}
+              initial={false}
+              animate={{ 
+                opacity: currentIndex === idx ? 1 : 0,
+                scale: currentIndex === idx ? 1.1 : 1.15
+              }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              src={img} 
+              alt={`Background ${idx + 1}`} 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ))}
+        </div>
       </motion.div>
 
       {/* Floating Glows */}

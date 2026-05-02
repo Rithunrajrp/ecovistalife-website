@@ -15,6 +15,12 @@ const STATS = [
   { number: '300+', label: 'Happy Clients' },
 ];
 
+const HERO_IMAGES = [
+  '/Images/hero/banner1.jpeg',
+  '/Images/hero/banner2.jpeg',
+  '/Images/hero/banner3.jpeg',
+];
+
 const FEATURES = [
   { title: 'Prime Location', description: 'Karamadai & Coimbatore — where peace meets connectivity.' },
   { title: 'High Returns', description: 'Smart investment. Growing demand. Proven appreciation.' },
@@ -51,7 +57,7 @@ export default function Home() {
       <Hero
         heading="Premium Lands. Exceptional Life."
         body="Invest in a legacy of sustainable luxury. We create high-appreciation gated communities and premium villa plots across Coimbatore and Karamadai."
-        image="/Images/Gardenia/IMG_4923.JPG"
+        images={HERO_IMAGES}
         buttons={[{ text: 'Explore Portfolio', href: '/projects' }]}
       />
 
