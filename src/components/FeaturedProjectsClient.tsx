@@ -25,7 +25,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-30px" }}
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8"
     >
       {projects.map((project: any) => (

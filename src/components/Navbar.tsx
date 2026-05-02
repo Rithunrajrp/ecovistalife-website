@@ -123,43 +123,45 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-bg-primary/98 backdrop-blur-xl flex flex-col items-center justify-center md:hidden"
+            className="fixed inset-0 z-40 bg-bg-primary/98 backdrop-blur-xl md:hidden overflow-y-auto"
           >
-            <nav className="flex flex-col items-center gap-2 w-full px-8">
-              {NAV_LINKS.map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ delay: i * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
-                  className="w-full"
-                >
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={cn(
-                      "block w-full text-center py-4 font-heading text-3xl font-bold transition-colors",
-                      pathname === link.href ? "text-accent" : "text-white hover:text-accent"
-                    )}
+            <div className="min-h-full flex flex-col items-center pt-32 pb-16">
+              <nav className="flex flex-col items-center gap-2 w-full px-8 mb-12">
+                {NAV_LINKS.map((link, i) => (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ delay: i * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
+                    className="w-full"
                   >
-                    {link.label}
-                  </Link>
-                  {i < NAV_LINKS.length - 1 && <div className="h-px w-full bg-white/5" />}
-                </motion.div>
-              ))}
-            </nav>
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={cn(
+                        "block w-full text-center py-4 font-heading text-3xl font-bold transition-colors",
+                        pathname === link.href ? "text-accent" : "text-white hover:text-accent"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                    {i < NAV_LINKS.length - 1 && <div className="h-px w-full bg-white/5" />}
+                  </motion.div>
+                ))}
+              </nav>
 
-            {/* Contact info at bottom */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="absolute bottom-12 text-center text-white/40 text-xs space-y-2"
-            >
-              <p>+91 97877 95555</p>
-              <p>info@ecovistalife.com</p>
-            </motion.div>
+              {/* Contact info at bottom of scrollable content */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="mt-auto text-center text-white/40 text-xs space-y-2 px-8"
+              >
+                <p>+91 97877 95555</p>
+                <p>info@ecovistalife.com</p>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

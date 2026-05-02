@@ -122,7 +122,7 @@ function Counter({ value }: { value: number }) {
     damping: 60,
     stiffness: 100,
   });
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-30px" });
 
   useEffect(() => {
     if (isInView) {
@@ -134,13 +134,13 @@ function Counter({ value }: { value: number }) {
     springValue.on("change", (latest) => {
       if (ref.current) {
         (ref.current as any).textContent = Intl.NumberFormat("en-US").format(
-          Math.floor(latest)
+          Math.round(latest)
         );
       }
     });
   }, [springValue]);
 
-  return <span ref={ref} className="font-heading text-5xl md:text-7xl font-bold text-white" />;
+  return <span ref={ref} className="font-heading text-5xl md:text-7xl font-bold text-white">0</span>;
 }
 
 function FeatureCard({ feature, index }: { feature: FeatureItem, index: number }) {
