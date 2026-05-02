@@ -13,10 +13,13 @@ const VALUES = [
   { title: 'Environmental Stewardship', desc: 'Sustainable practices creating eco-friendly communities that prioritize the health and well-being of our residents and the planet.' },
 ];
 
+const DIRECTORS = [
+  { name: 'Jaganathan T', role: 'Managing Director', image: '/Images/Managing Director/JAGANATHAN T.jpeg' },
+  { name: 'Sakthi NM', role: 'Managing Director', image: '/Images/Managing Director/SAKTHI NM.jpeg' },
+];
+
 const TEAM = [
-  { name: 'Sanjay Anbuchelvan', role: 'Founder & CEO', image: '/Images/Family Fest/team/IMG_0050.JPG' },
-  { name: 'Aravind Subramanian', role: 'Head of Architecture', image: '/Images/Family Fest/team/IMG_0051.JPG' },
-  { name: 'Meena Raghavan', role: 'Sustainability Director', image: '/Images/Family Fest/team/IMG_0052.JPG' },
+  { name: 'EcoVistaLife Team', role: '', image: '/Images/Family Fest/team/IMG_0055.JPG' },
 ];
 
 const TIMELINE = [
@@ -240,23 +243,24 @@ export default function AboutClient() {
       <SectionWrapper className="py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-20 text-center flex flex-col items-center">
-            <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">The Architects</span>
-            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Leadership.</h2>
+            <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Our Visionaries</span>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Managing Directors.</h2>
           </div>
+
           <motion.div 
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.1, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-20 max-w-5xl mx-auto mb-32"
           >
-            {TEAM.map((member, i) => (
+            {DIRECTORS.map((member, i) => (
               <motion.div 
                 key={i}
                 variants={itemVariants}
                 className="group cursor-pointer"
               >
-                <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl sm:rounded-[2rem] border border-white/5 mb-8">
+                <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl sm:rounded-[2.5rem] border border-white/5 mb-8 shadow-2xl">
                   <motion.img 
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
@@ -266,8 +270,38 @@ export default function AboutClient() {
                   />
                 </div>
                 <div className="text-center overflow-hidden">
-                  <motion.h3 variants={nestedTextVariants} className="font-heading text-2xl font-bold text-white mb-2">{member.name}</motion.h3>
-                  <motion.p variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { delay: 0.2 } } }} className="text-white/40 uppercase tracking-[0.2em] text-[10px] font-mono">{member.role}</motion.p>
+                  <motion.h3 variants={nestedTextVariants} className="font-heading text-3xl font-bold text-white mb-2">{member.name}</motion.h3>
+                  <motion.p variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { delay: 0.2 } } }} className="text-accent uppercase tracking-[0.2em] text-xs font-mono font-bold">{member.role}</motion.p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="mb-20 text-center flex flex-col items-center pt-20 border-t border-white/5">
+            <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-6 block">Our People</span>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter">EcoVistaLife Team.</h2>
+          </div>
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.1, margin: "-50px" }}
+            className="max-w-6xl mx-auto"
+          >
+            {TEAM.map((member, i) => (
+              <motion.div 
+                key={i}
+                variants={itemVariants}
+                className="group cursor-pointer"
+              >
+                <div className="aspect-[21/9] w-full overflow-hidden rounded-2xl sm:rounded-[3rem] border border-white/5 shadow-2xl">
+                  <motion.img 
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000"
+                  />
                 </div>
               </motion.div>
             ))}

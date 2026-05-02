@@ -49,14 +49,18 @@ interface ProjectClientProps {
   location?: string;
   plotSizes?: string;
   priceRange?: string;
+  video?: string;
+  endImage?: string;
 }
 
 export default function ProjectClient({
   title, description, content, images,
   status = 'Published', location, plotSizes, priceRange,
+  video, endImage,
 }: ProjectClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const [videoEnded, setVideoEnded] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -94,11 +98,37 @@ export default function ProjectClient({
           className="absolute inset-0 z-0"
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-bg-primary z-10" />
-          <img 
-            className="w-full h-full object-cover" 
-            src={images[0] || '/Images/Gardenia/IMG_4923.JPG'} 
-            alt={title} 
-          />
+          {video ? (
+            <>
+              <video
+                className="w-full h-full object-cover"
+                src={video}
+                autoPlay
+                playsInline
+                loop={false}
+                muted={false}
+                onEnded={() => setVideoEnded(true)}
+              />
+              <AnimatePresence>
+                {videoEnded && (
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    src={endImage || images[0]}
+                    alt={title}
+                    className="absolute inset-0 w-full h-full object-cover z-20"
+                  />
+                )}
+              </AnimatePresence>
+            </>
+          ) : (
+            <img 
+              className="w-full h-full object-cover" 
+              src={images[0] || '/Images/Gardenia/IMG_4923.JPG'} 
+              alt={title} 
+            />
+          )}
         </motion.div>
 
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-20">

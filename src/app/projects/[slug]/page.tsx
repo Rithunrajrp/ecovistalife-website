@@ -90,7 +90,9 @@ const FALLBACK_PROJECTS: Record<string, any> = {
     status: 'Upcoming',
     location: 'Coimbatore',
     plotSizes: '1,500 – 3,500 sq ft',
-    priceRange: 'Coming Soon',
+    priceRange: 'starting from 12.49L',
+    video: '/video/frenchville.mp4',
+    endImage: '/Images/French Ville/frenchville_bg.jpeg',
   },
   ecolife: {
     title: 'EcoLife',
@@ -183,6 +185,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       location={project.location}
       plotSizes={project.plotSizes}
       priceRange={project.priceRange}
+      video={project.video}
+      endImage={project.endImage}
     />
   );
 }
