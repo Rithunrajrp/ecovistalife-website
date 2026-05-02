@@ -161,7 +161,7 @@ export default function Hero({ heading, body, image, images, buttons }: HeroProp
 
           <div className="flex gap-4">
             <TrustBadge label="100%" sub="Secure" />
-            <TrustBadge label="DTCP" sub="Approved" />
+            <TrustBadge label="DTCP & RERA" sub="Approved" />
           </div>
         </motion.div>
       </div>

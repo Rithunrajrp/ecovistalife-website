@@ -27,7 +27,7 @@ async function getProjects() {
         title: 'Mount Shadows',
         description: 'Premium aerial plots in Karamadai with world-class amenities and serene surroundings.',
         images: ['/Images/Mount Shadows/DJI_0301.JPG'],
-        status: 'Completed',
+        status: 'Ongoing',
       },
     ];
   }

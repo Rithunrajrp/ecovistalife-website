@@ -10,9 +10,9 @@ import HomeCTA from '@/components/HomeCTA';
 
 const STATS = [
   { number: '3+', label: 'Projects' },
-  { number: '450+', label: 'Plots' },
+  { number: '550+', label: 'Plots' },
   { number: '400+', label: 'Luxury Houses' },
-  { number: '300+', label: 'Happy Clients' },
+  { number: '400+', label: 'Happy Clients' },
 ];
 
 const HERO_IMAGES = [

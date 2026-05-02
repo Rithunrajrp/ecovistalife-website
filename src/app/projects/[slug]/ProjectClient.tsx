@@ -70,11 +70,6 @@ export default function ProjectClient({
   const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.1]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0.3]);
 
-  const statusClass = status?.toLowerCase() === 'ongoing'
-    ? "bg-accent/20 text-accent border-accent/30"
-    : status?.toLowerCase() === 'upcoming'
-    ? "bg-purple-500/20 text-purple-300 border-purple-500/30"
-    : "bg-emerald-500/20 text-emerald-300 border-emerald-500/30";
 
   let displayContent = content;
   let amenitiesList: string[] = [];
@@ -139,9 +134,24 @@ export default function ProjectClient({
             className="max-w-4xl"
           >
             <div className="flex flex-wrap items-center gap-4 mb-8">
-              <span className={cn("px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] border", statusClass)}>
-                {status}
-              </span>
+              <div className={cn(
+                "flex items-center gap-2 px-5 py-2 rounded-full shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 border-2",
+                status.toLowerCase() === 'ongoing' 
+                  ? "bg-emerald-600 text-white border-emerald-400" 
+                  : status.toLowerCase() === 'upcoming'
+                  ? "bg-indigo-600 text-white border-indigo-400"
+                  : "bg-accent text-white border-white/40"
+              )}>
+                {status.toLowerCase() === 'ongoing' && (
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                  </span>
+                )}
+                <span className="text-[12px] font-black uppercase tracking-[0.2em] whitespace-nowrap drop-shadow-sm">
+                  {status}
+                </span>
+              </div>
               <div className="h-px w-12 bg-white/20" />
               <span className="text-white/60 text-xs uppercase tracking-[0.3em] font-mono">
                 {location}

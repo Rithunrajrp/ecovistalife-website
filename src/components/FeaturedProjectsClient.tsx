@@ -53,14 +53,22 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
                   viewport={{ once: true }}
                   className="absolute top-6 left-6 z-20"
                 >
-                  <span className={cn(
-                    "backdrop-blur-xl px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border",
-                    project.status.toLowerCase() === 'ongoing' ? "bg-blue-500/10 text-blue-300 border-blue-500/20" :
-                    project.status.toLowerCase() === 'upcoming' ? "bg-purple-500/10 text-purple-300 border-purple-500/20" :
-                    "bg-accent/10 text-accent border-accent/20"
+                  <div className={cn(
+                    "flex items-center gap-2 px-4 py-2 rounded-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 border-2",
+                    project.status.toLowerCase() === 'ongoing' ? "bg-emerald-600 text-white border-emerald-400" :
+                    project.status.toLowerCase() === 'upcoming' ? "bg-indigo-600 text-white border-indigo-400" :
+                    "bg-accent text-white border-white/30"
                   )}>
-                    {project.status}
-                  </span>
+                    {project.status.toLowerCase() === 'ongoing' && (
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                      </span>
+                    )}
+                    <span className="text-[10px] font-black uppercase tracking-widest drop-shadow-sm">
+                      {project.status}
+                    </span>
+                  </div>
                 </motion.div>
 
                 {/* Content Overlay */}
