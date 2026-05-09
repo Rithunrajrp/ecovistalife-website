@@ -9,14 +9,14 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.1
     }
   }
 };
 
 const item = {
   hidden: { opacity: 0, y: 50 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const } }
 };
 
 export default function FeaturedProjectsClient({ projects }: { projects: any[] }) {
@@ -32,7 +32,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
         <motion.div key={project.slug} variants={item}>
           <Link 
             href={`/projects/${project.slug}`} 
-            className="block group relative rounded-2xl sm:rounded-[2rem] overflow-hidden bg-bg-secondary border border-white/5 h-full"
+            className="block group relative rounded-2xl sm:rounded-[2rem] overflow-hidden bg-bg-secondary/80 backdrop-blur-xl border border-white/5 h-full"
           >
             {project.images?.[0] && (
               <div className="relative aspect-video w-full overflow-hidden">
@@ -55,9 +55,9 @@ export default function FeaturedProjectsClient({ projects }: { projects: any[] }
                 >
                   <div className={cn(
                     "flex items-center gap-2 px-4 py-2 rounded-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 border-2",
-                    project.status.toLowerCase() === 'ongoing' ? "bg-emerald-600 text-white border-emerald-400" :
-                    project.status.toLowerCase() === 'upcoming' ? "bg-indigo-600 text-white border-indigo-400" :
-                    "bg-accent text-white border-white/30"
+                    project.status.toLowerCase() === 'ongoing' ? "bg-accent-green text-white border-white/20" :
+                    project.status.toLowerCase() === 'upcoming' ? "bg-accent/80 text-white border-white/20" :
+                    "bg-accent text-white border-white/20"
                   )}>
                     {project.status.toLowerCase() === 'ongoing' && (
                       <span className="relative flex h-2 w-2">

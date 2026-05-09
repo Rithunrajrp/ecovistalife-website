@@ -8,10 +8,10 @@ const FALLBACK_PROJECTS: Record<string, any> = {
   gardenia: {
     title: 'Ecolife Gardenia',
     slug: 'gardenia',
-    description: 'Premium DTCP/RERA-approved plots in a secure gated community at Karamadai, Coimbatore. Flexible payment plans with eco-friendly living.',
+    description: 'Premium DTCP/RERA-approved plots in a secure gated community at Ganeshapuram, Coimbatore. Flexible payment plans with eco-friendly living.',
     content: `
       <h2>About Ecolife Gardenia</h2>
-      <p>Ecolife Gardenia is our flagship project offering premium residential plots in the serene town of Karamadai, Coimbatore. Nestled amidst lush greenery and rolling hills, this DTCP/RERA-approved development provides the perfect balance of modern amenities and sustainable living.</p>
+      <p>Ecolife Gardenia is our flagship project offering premium residential plots in the serene town of Ganeshapuram, Coimbatore. Nestled amidst lush greenery and rolling hills, this DTCP/RERA-approved development provides the perfect balance of modern amenities and sustainable living.</p>
       <h3>Key Highlights</h3>
       <ul>
         <li>DTCP & RERA Approved</li>
@@ -23,7 +23,7 @@ const FALLBACK_PROJECTS: Record<string, any> = {
       <h3>Amenities</h3>
       <p>CCTV Surveillance • Storm Water Drain • LED Street Lights • Jogging Track • Yoga Deck • Gazebo Seating • Senior Citizen Park • Turf Court • Open Play Area • Outdoor Gym • Compound Wall • Kids' Play Zone • Overhead Tank • 24/7 Security</p>
       <h3>Location Advantage</h3>
-      <p>Karamadai is one of the fastest-growing residential destinations in Coimbatore. With excellent connectivity to Mettupalayam, Coimbatore CBD, and major IT corridors, your investment is poised for significant appreciation.</p>
+      <p>Ganeshapuram is one of the fastest-growing residential destinations in Coimbatore, offering strategic proximity to Sathy Road, major educational institutions, and healthcare centers. With rapidly developing infrastructure and easy access to the city's key hubs, your investment in Gardenia is positioned for exponential growth and premium appreciation.</p>
     `,
     images: [
       '/Images/Gardenia/IMG_4923.JPG',
@@ -34,9 +34,9 @@ const FALLBACK_PROJECTS: Record<string, any> = {
       '/Images/Gardenia/IMG_4928.JPG',
     ],
     status: 'Completed',
-    location: 'Karamadai, Coimbatore',
+    location: 'Ganeshapuram, Coimbatore',
     plotSizes: '1,200 – 5,000 sq ft',
-    priceRange: '₹8.5L – ₹35L',
+    priceRange: '₹5.5L – ₹35L',
   },
   'mount-shadows': {
     title: 'Mount Shadows',
@@ -52,6 +52,8 @@ const FALLBACK_PROJECTS: Record<string, any> = {
         <li>Gated Community with Advanced Security</li>
         <li>Close to Nature, Connected to City</li>
       </ul>
+      <h3>Amenities</h3>
+      <p>CCTV Surveillance • Storm Water Drain • LED Street Lights • Jogging Track • Yoga Deck • Senior Citizen Park • Outdoor Gym • Compound Wall • 24/7 Security • Overhead Tank</p>
     `,
     images: [
       '/Images/Mount Shadows/DJI_0301.JPG',
@@ -63,7 +65,8 @@ const FALLBACK_PROJECTS: Record<string, any> = {
     status: 'Completed',
     location: 'Karamadai, Coimbatore',
     plotSizes: '2,000 – 4,500 sq ft',
-    priceRange: 'Coming Soon',
+    priceRange: '₹10.49L / cent & 2 BHK Villas from ₹49L Onwards',
+    brochure: '/brochure/mount shadows.pdf',
   },
   frenchville: {
     title: 'Frenchville',
@@ -79,6 +82,8 @@ const FALLBACK_PROJECTS: Record<string, any> = {
         <li>Premium Clubhouse & Recreation</li>
         <li>Eco-friendly & Sustainable Design</li>
       </ul>
+      <h3>Amenities</h3>
+      <p>French-inspired Clubhouse • Mediterranean Themed Garden • CCTV Surveillance • LED Street Lights • Jogging Track • Kids Play Area • Senior Citizen Seating • Compound Wall • 24/7 Security • Rainwater Harvesting</p>
     `,
     images: [
       '/Images/French Ville/WhatsApp Image 2026-04-10 at 3.12.21 PM1.jpeg',
@@ -187,6 +192,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       priceRange={project.priceRange}
       video={project.video}
       endImage={project.endImage}
+      brochure={project.brochure}
     />
   );
 }

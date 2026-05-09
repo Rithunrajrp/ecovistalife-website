@@ -14,10 +14,10 @@ const PROJECTS = [
     slug: 'gardenia',
     title: 'Gardenia',
     subtitle: 'Premium Gated Plots',
-    description: 'Eco-friendly gated community living in Karamadai with flexible payments and sustainable infrastructure.',
+    description: 'Eco-friendly gated community living in Ganeshapuram with flexible payments and sustainable infrastructure.',
     image: '/Images/Gardenia/IMG_4923.JPG',
     status: 'Completed',
-    location: 'Karamadai, Coimbatore',
+    location: 'Ganeshapuram, Coimbatore',
     id: '01'
   },
   {
@@ -28,6 +28,7 @@ const PROJECTS = [
     image: '/Images/Mount Shadows/DJI_0301.JPG',
     status: 'Ongoing',
     location: 'Karamadai, Coimbatore',
+    brochure: '/brochure/mount shadows.pdf',
     id: '02'
   },
   {
@@ -102,10 +103,10 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
               <div className={cn(
                 "flex items-center gap-3 px-5 py-2.5 rounded-full shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 border-2",
                 project.status.toLowerCase() === 'ongoing' 
-                  ? "bg-emerald-600 text-white border-emerald-400" 
+                  ? "bg-accent-green text-white border-white/20" 
                   : project.status.toLowerCase() === 'upcoming'
-                  ? "bg-indigo-600 text-white border-indigo-400"
-                  : "bg-accent text-white border-white/40"
+                  ? "bg-accent/80 text-white border-white/20"
+                  : "bg-accent text-white border-white/20"
               )}>
                 {project.status.toLowerCase() === 'ongoing' && (
                   <span className="relative flex h-2.5 w-2.5">
@@ -158,9 +159,11 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
                   View Project
                 </MagneticButton>
               </Link>
-              <button className="px-8 py-4 text-xs uppercase tracking-widest border border-white/10 hover:bg-white/5 transition-colors rounded-full text-white/60 hover:text-white">
-                Download Brochure
-              </button>
+              {project.brochure && (
+                <a href={project.brochure} download className="px-8 py-4 text-xs uppercase tracking-widest border border-white/10 hover:bg-white/5 transition-colors rounded-full text-white/60 hover:text-white">
+                  Download Brochure
+                </a>
+              )}
             </div>
           </motion.div>
         </div>

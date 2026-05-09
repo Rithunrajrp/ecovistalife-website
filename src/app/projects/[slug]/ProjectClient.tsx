@@ -51,12 +51,13 @@ interface ProjectClientProps {
   priceRange?: string;
   video?: string;
   endImage?: string;
+  brochure?: string;
 }
 
 export default function ProjectClient({
   title, description, content, images,
   status = 'Published', location, plotSizes, priceRange,
-  video, endImage,
+  video, endImage, brochure,
 }: ProjectClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
@@ -137,10 +138,10 @@ export default function ProjectClient({
               <div className={cn(
                 "flex items-center gap-2 px-5 py-2 rounded-full shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] transition-all duration-500 border-2",
                 status.toLowerCase() === 'ongoing' 
-                  ? "bg-emerald-600 text-white border-emerald-400" 
+                  ? "bg-accent-green text-white border-white/20" 
                   : status.toLowerCase() === 'upcoming'
-                  ? "bg-indigo-600 text-white border-indigo-400"
-                  : "bg-accent text-white border-white/40"
+                  ? "bg-accent/80 text-white border-white/20"
+                  : "bg-accent text-white border-white/20"
               )}>
                 {status.toLowerCase() === 'ongoing' && (
                   <span className="relative flex h-2.5 w-2.5">
@@ -235,7 +236,7 @@ export default function ProjectClient({
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     {amenitiesList.map((amenity, idx) => (
                       <div key={idx} className="bg-white/5 border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center text-center gap-3 hover:bg-white/10 transition-colors group">
-                        <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <div className="w-12 h-12 rounded-full bg-accent-green/10 text-accent-green flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                           {getAmenityIcon(amenity)}
                         </div>
                         <span className="text-white/80 font-medium text-xs">{amenity}</span>
@@ -275,9 +276,22 @@ export default function ProjectClient({
                     </div>
                   </div>
 
-                  <Link href="/contact" className="block">
-                    <MagneticButton className="w-full py-6 text-lg">Enquire Now</MagneticButton>
-                  </Link>
+                  <div className="space-y-4">
+                    <Link href="/contact" className="block">
+                      <MagneticButton className="w-full py-6 text-lg">Enquire Now</MagneticButton>
+                    </Link>
+                    
+                    {brochure && (
+                      <a 
+                        href={brochure} 
+                        download 
+                        className="flex items-center justify-center gap-3 w-full py-5 rounded-full border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-all text-sm font-bold uppercase tracking-widest group"
+                      >
+                        <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+                        Download Brochure
+                      </a>
+                    )}
+                  </div>
                 </motion.div>
 
                 <div className="p-6 sm:p-10 rounded-2xl sm:rounded-[3rem] bg-accent/5 border border-accent/10 flex items-center justify-between">

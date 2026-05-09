@@ -1,14 +1,16 @@
 "use client";
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import Footer from '@/components/Footer';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import { cn } from '@/lib/utils';
 import MagneticButton from '@/components/MagneticButton';
 import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
 
 export default function NRIPage() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -78,10 +80,19 @@ export default function NRIPage() {
                 <p className="text-white/60 text-base sm:text-xl leading-relaxed font-light">
                   Ranked as one of India's safest and fastest-growing cities, Coimbatore offers a lifestyle of serenity and an investment landscape of high returns. We bridge the gap between where you are and where you belong.
                 </p>
-                <div className="pt-8">
+                <div className="flex flex-wrap gap-4 pt-8">
                   <Link href="/contact">
-                    <MagneticButton className="px-12 py-5">Schedule a Virtual Tour</MagneticButton>
+                    <MagneticButton className="px-10 py-5 text-sm uppercase tracking-widest font-bold">Schedule a Virtual Tour</MagneticButton>
                   </Link>
+                  <button 
+                    onClick={() => setIsVideoOpen(true)}
+                    className="px-10 py-5 border border-white/10 rounded-full text-white/60 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest text-xs font-bold flex items-center gap-3 group"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:text-black transition-all">
+                      <span className="text-[10px] ml-0.5">▶</span>
+                    </div>
+                    Watch Video
+                  </button>
                 </div>
               </motion.div>
             </div>
@@ -97,6 +108,56 @@ export default function NRIPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 sm:p-10"
+            onClick={() => setIsVideoOpen(false)}
+          >
+            <motion.button
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white text-2xl hover:bg-white/20 transition-all z-10"
+              onClick={() => setIsVideoOpen(false)}
+            >
+              ✕
+            </motion.button>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-6xl aspect-video rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl bg-black border border-white/10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Google Drive Embed */}
+              <iframe
+                className="w-full h-full"
+                src="https://drive.google.com/file/d/1nour6fCVGbe22wh4xgqnRTNlY7e63YVm/preview" 
+                title="NRI Presentation"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+              
+              {/* If using MP4 after compression, use this instead: */}
+              {/* 
+              <video 
+                className="w-full h-full object-cover" 
+                controls 
+                autoPlay 
+                src="/video/nri-presentation.mp4" 
+              /> 
+              */}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Visual Process Section */}
       <SectionWrapper className="bg-bg-secondary rounded-2xl sm:rounded-[3rem] lg:rounded-[5rem] py-20 sm:py-32">

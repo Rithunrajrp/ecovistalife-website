@@ -5,6 +5,7 @@ import PageHeader from "@/components/ui/PageHeader";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Footer from "@/components/Footer";
 import MagneticButton from "@/components/MagneticButton";
+import VisionMission from "@/components/VisionMission";
 
 const VALUES = [
   { title: 'Excellence in Craftsmanship', desc: 'Superior craftsmanship with precise attention to detail, ensuring exceptional quality in every aspect of our properties. We do not compromise on the foundation of our legacy.' },
@@ -112,32 +113,7 @@ export default function AboutClient() {
       </SectionWrapper>
 
       {/* Manifesto: Vision & Mission */}
-      <SectionWrapper className="py-20 sm:py-32">
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: false, amount: 0.1, margin: "-100px" }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/5 border border-white/5 rounded-2xl sm:rounded-[3rem] overflow-hidden">
-            <motion.div variants={itemVariants} className="bg-bg-secondary p-8 sm:p-12 md:p-20 relative group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] -mr-32 -mt-32 transition-opacity duration-700 opacity-0 group-hover:opacity-100" />
-              <span className="font-mono text-accent text-xs tracking-[0.4em] uppercase mb-8 block">Our Vision</span>
-              <p className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
-                To engineer communities where human innovation and environmental stewardship exist in <span className="text-white/40 italic">perfect equilibrium</span>.
-              </p>
-            </motion.div>
-            <motion.div variants={itemVariants} className="bg-bg-secondary p-8 sm:p-12 md:p-20 relative group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[100px] -mr-32 -mt-32 transition-opacity duration-700 opacity-0 group-hover:opacity-100" />
-              <span className="font-mono text-accent text-xs tracking-[0.4em] uppercase mb-8 block">Our Mission</span>
-              <p className="font-heading text-2xl sm:text-3xl md:text-5xl font-bold leading-tight tracking-tighter text-white">
-                To deliver uncompromising quality through transparent practices, building <span className="text-white/40 italic">sustainable legacies</span> for our clients.
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
-      </SectionWrapper>
+      <VisionMission />
 
       {/* Editorial Core Values (Nested Stagger) */}
       <SectionWrapper className="py-12 sm:py-20">

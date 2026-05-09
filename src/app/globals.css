@@ -5,7 +5,8 @@
   --color-bg-secondary: #121212;
   --color-text-primary: #ffffff;
   --color-text-secondary: #a3a3a3;
-  --color-accent: #c49a45;
+  --color-accent: #0081C9; /* Brand Blue */
+  --color-accent-green: #79C043; /* Brand Green */
   --font-sans: var(--font-inter), sans-serif;
   --font-heading: var(--font-outfit), sans-serif;
   --animate-marquee: marquee 30s linear infinite;
@@ -22,7 +23,8 @@
   --color-bg-secondary: #121212;
   --color-text-primary: #ffffff;
   --color-text-secondary: #a3a3a3;
-  --color-accent: #c49a45; /* Gold/Steel accent */
+  --color-accent: #0081C9; /* Brand Blue */
+  --color-accent-green: #79C043; /* Brand Green */
   
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;

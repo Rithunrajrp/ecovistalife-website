@@ -159,7 +159,7 @@ export default function Hero({ heading, body, image, images, buttons }: HeroProp
             <Link href="/projects/frenchville" className="text-white text-[10px] uppercase tracking-widest font-bold border-b border-accent pb-1 inline-block hover:text-accent transition-colors">Explore Launch</Link>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-stretch">
             <TrustBadge label="100%" sub="Secure" />
             <TrustBadge label="DTCP & RERA" sub="Approved" />
           </div>
@@ -187,8 +187,8 @@ export default function Hero({ heading, body, image, images, buttons }: HeroProp
 }
 
 const TrustBadge = ({ label, sub }: { label: string, sub: string }) => (
-  <div className="flex-1 bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[2rem] text-center">
-    <div className="text-white font-heading font-bold text-xl">{label}</div>
-    <div className="text-[10px] uppercase tracking-widest text-white/30">{sub}</div>
+  <div className="flex-1 bg-white/5 backdrop-blur-xl border border-white/10 p-6 sm:p-8 rounded-[2rem] flex flex-col items-center justify-center text-center">
+    <div className="text-white font-heading font-bold text-xl sm:text-2xl leading-tight">{label}</div>
+    <div className="text-[10px] uppercase tracking-widest text-white/30 mt-2">{sub}</div>
   </div>
 );

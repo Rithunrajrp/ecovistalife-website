@@ -6,6 +6,7 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import JsonLd from "@/components/JsonLd";
+import LoadingScreen from "@/components/ui/LoadingScreen";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -109,6 +110,7 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body>
+        <LoadingScreen />
         <CustomCursor />
         <Navbar />
         <SmoothScrollProvider>

@@ -65,10 +65,8 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-          
-          {/* Chapter Text */}
-          <div className="lg:col-span-5 lg:sticky lg:top-40">
+          {/* Balanced Centered Layout */}
+          <div className="lg:col-span-12">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -82,6 +80,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                   }
                 }
               }}
+              className="flex flex-col items-center text-center max-w-4xl mx-auto mb-20"
             >
               <motion.div
                 variants={{
@@ -94,6 +93,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                 <span className="text-accent font-mono text-sm tracking-[0.3em] uppercase">
                   {chapter.subtitle}
                 </span>
+                <div className="w-10 h-px bg-accent" />
               </motion.div>
 
               <motion.h2 
@@ -101,33 +101,23 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }
                 }}
-                className="font-heading text-3xl sm:text-4xl md:text-6xl font-bold mb-8 sm:mb-10 text-white leading-tight"
+                className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold mb-8 text-white leading-tight"
               >
                 {chapter.title}
               </motion.h2>
 
-              <motion.div 
+              <motion.p 
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }
                 }}
-                className="space-y-6"
+                className="text-text-secondary text-lg sm:text-2xl leading-relaxed font-light max-w-3xl"
               >
-                <p className="text-text-secondary text-base sm:text-xl leading-relaxed italic border-l-2 border-accent/20 pl-4 sm:pl-6">
-                  {chapter.description}
-                </p>
-                <div className="pt-8">
-                  <div className="inline-flex items-center gap-3 text-white/40 text-sm uppercase tracking-widest">
-                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                    Chapter {index + 1} of 5
-                  </div>
-                </div>
-              </motion.div>
+                {chapter.description}
+              </motion.p>
             </motion.div>
-          </div>
 
-          {/* Chapter Images (Grid) */}
-          <div className="lg:col-span-7">
+            {/* Chapter Images (Balanced Grid) */}
             <motion.div 
               initial="hidden"
               whileInView="show"
@@ -141,9 +131,9 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                   }
                 }
               }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10"
             >
-              {chapter.images.slice(0, 8).map((src, idx) => (
+              {chapter.images.slice(0, 12).map((src, idx) => (
                 <motion.div
                   key={src}
                   variants={{
@@ -152,8 +142,8 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                   }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
                   className={cn(
-                    "relative aspect-[4/5] overflow-hidden rounded-2xl sm:rounded-[2.5rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
-                    idx % 3 === 0 ? "sm:col-span-2 aspect-[16/9]" : ""
+                    "relative aspect-[4/5] overflow-hidden rounded-2xl sm:rounded-[3rem] cursor-pointer group shadow-2xl bg-white/5 border border-white/5",
+                    idx % 7 === 0 ? "lg:col-span-2 lg:aspect-[16/9]" : ""
                   )}
                   onClick={() => onImageClick(src)}
                 >
@@ -163,7 +153,7 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-10">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-10">
                     <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center transform translate-y-8 group-hover:translate-y-0 transition-all duration-700 delay-100 shadow-2xl">
                       <span className="text-2xl font-light">⤢</span>
                     </div>
@@ -172,24 +162,23 @@ function StoryChapter({ chapter, onImageClick, index }: { chapter: typeof CHAPTE
               ))}
             </motion.div>
             
-            {chapter.images.length > 8 && (
+            {chapter.images.length > 12 && (
               <motion.div 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="mt-12 text-center"
+                className="mt-16 text-center"
               >
                 <Link 
                   href={`/fest/${chapter.id}`}
-                  className="text-white/40 hover:text-accent transition-colors text-sm uppercase tracking-widest flex items-center gap-3 mx-auto justify-center"
+                  className="inline-flex items-center gap-6 group"
                 >
-                  <span>View all chapter images</span>
-                  <span className="w-8 h-px bg-white/20" />
+                  <span className="text-white/40 group-hover:text-accent transition-colors text-xs uppercase tracking-[0.4em] font-bold">Explore Full Gallery</span>
+                  <div className="w-12 h-px bg-white/20 group-hover:w-20 group-hover:bg-accent transition-all duration-500" />
                 </Link>
               </motion.div>
             )}
           </div>
         </div>
-      </div>
     </SectionWrapper>
   );
 }

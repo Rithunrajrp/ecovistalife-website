@@ -18,7 +18,7 @@ async function getProjects() {
       {
         slug: 'gardenia',
         title: 'Gardenia',
-        description: 'Land for Sale in Karamadai with flexible payments and eco-friendly gated community living.',
+        description: 'Land for Sale in Ganeshapuram with flexible payments and eco-friendly gated community living.',
         images: ['/Images/Gardenia/IMG_4923.JPG'],
         status: 'Completed',
       },

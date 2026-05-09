@@ -58,7 +58,7 @@ export default function HomeSections({ stats, features, testimonials }: HomeSect
 
       {/* Features Section */}
       <SectionWrapper className="py-16 sm:py-24 px-4 md:px-12">
-        <div className="max-w-7xl mx-auto bg-bg-secondary rounded-2xl sm:rounded-[3rem] lg:rounded-[4rem] p-6 sm:p-12 md:p-24 border border-white/5 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto bg-bg-secondary/80 backdrop-blur-xl rounded-2xl sm:rounded-[3rem] lg:rounded-[4rem] p-6 sm:p-12 md:p-24 border border-white/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px] -mr-48 -mt-48" />
           
           <div className="mb-20 relative z-10">
@@ -150,7 +150,7 @@ function FeatureCard({ feature, index }: { feature: FeatureItem, index: number }
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-bg-secondary p-8 sm:p-12 group hover:bg-white/5 transition-colors duration-700 relative"
+      className="bg-bg-secondary/80 backdrop-blur-xl p-8 sm:p-12 group hover:bg-white/5 transition-colors duration-700 relative"
     >
       <motion.div
         initial={{ opacity: 0, x: -20 }}

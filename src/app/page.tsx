@@ -4,6 +4,7 @@ import HomeSections from '@/components/HomeSections';
 import Footer from '@/components/Footer';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import FeaturedProjects from '@/components/FeaturedProjects';
+import VisionMission from '@/components/VisionMission';
 import CustomerMarquee from '@/components/CustomerMarquee';
 import HomeFAQs from '@/components/HomeFAQs';
 import HomeCTA from '@/components/HomeCTA';
@@ -62,7 +63,7 @@ export default function Home() {
       />
 
       <FeaturedProjects />
-
+      <VisionMission />
       <HomeSections stats={STATS} features={FEATURES} testimonials={TESTIMONIALS} />
 
       <CustomerMarquee />

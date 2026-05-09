@@ -35,13 +35,13 @@ export async function POST(req: NextRequest) {
             <tr>
               <td style="padding: 12px; background: #fff; border-bottom: 1px solid #eee;">
                 <strong style="color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email</strong><br/>
-                <a href="mailto:${email}" style="color: #c49a45; font-size: 16px;">${email}</a>
+                <a href="mailto:${email}" style="color: #0081C9; font-size: 16px;">${email}</a>
               </td>
             </tr>
             <tr>
               <td style="padding: 12px; background: #fff; border-bottom: 1px solid #eee;">
                 <strong style="color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Phone</strong><br/>
-                <a href="tel:${phone}" style="color: #c49a45; font-size: 16px;">${phone}</a>
+                <a href="tel:${phone}" style="color: #0081C9; font-size: 16px;">${phone}</a>
               </td>
             </tr>
             <tr>
