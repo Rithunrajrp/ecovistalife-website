@@ -13,7 +13,6 @@ const CUSTOMER_IMAGES = [
   '/Images/Customers/571B3096.JPG',
   '/Images/Customers/571B3098.JPG',
   '/Images/Customers/571B3101.JPG',
-  '/Images/Customers/571B3102.JPG',
   '/Images/Customers/571B3104.JPG',
   '/Images/Customers/IMG_9593.JPG',
   '/Images/Customers/IMG_9601.JPG',
