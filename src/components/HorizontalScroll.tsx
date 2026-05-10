@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface Panel {
   title: string;
@@ -28,8 +29,8 @@ export default function HorizontalScroll({ panels }: { panels: Panel[] }) {
   // Mobile: vertical card stack
   if (isMobile) {
     return (
-      <section className="bg-bg-secondary py-16">
-        <div className="space-y-6 px-4">
+      <section className="bg-bg-primary py-16">
+        <div className="space-y-16 px-6">
           {panels.map((panel, index) => (
             <MobileCard key={index} panel={panel} index={index} />
           ))}
@@ -40,12 +41,20 @@ export default function HorizontalScroll({ panels }: { panels: Panel[] }) {
 
   // Desktop: horizontal scroll
   return (
-    <section ref={targetRef} className="relative h-[400vh] bg-bg-secondary">
+    <section ref={targetRef} className="relative bg-bg-primary" style={{ height: `${panels.length * 100}vh` }}>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex">
-          {panels.map((panel, index) => {
-            return <Card panel={panel} key={index} index={index} progress={scrollYProgress} total={panels.length} />;
-          })}
+        
+        {/* Background Ambient Text */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-heading font-bold text-white/5 whitespace-nowrap pointer-events-none selection:bg-transparent">
+          Our Services
+        </div>
+
+        <motion.div style={{ x }} className="flex h-full items-center">
+          {panels.map((panel, index) => (
+            <div key={index} className="w-[100vw] h-full flex items-center justify-center shrink-0 px-12 md:px-24">
+              <Card panel={panel} index={index} progress={scrollYProgress} total={panels.length} />
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
@@ -58,24 +67,23 @@ const MobileCard = ({ panel, index }: { panel: Panel; index: number }) => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="relative rounded-3xl overflow-hidden min-h-[70vh] flex items-end"
+      transition={{ duration: 0.8, delay: 0.1 }}
+      className="flex flex-col gap-6"
     >
-      {panel.image && (
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
+      <div className="aspect-[4/3] rounded-3xl overflow-hidden relative shadow-2xl border border-white/10">
+        {panel.image && (
           <img src={panel.image} alt={panel.title} className="w-full h-full object-cover" />
-        </div>
-      )}
-      <div className="relative z-20 p-6 pb-8">
+        )}
+      </div>
+      <div>
         <div className="flex items-center gap-4 mb-4">
-          <span className="text-accent font-mono text-2xl font-bold opacity-80">0{index + 1}</span>
+          <span className="text-accent font-mono text-xl font-bold opacity-80">0{index + 1}</span>
           <div className="h-px w-12 bg-accent/50" />
         </div>
-        <h3 className="font-heading text-3xl sm:text-4xl font-bold mb-4 text-white leading-tight tracking-tight">
+        <h3 className="font-heading text-3xl font-bold mb-3 text-white leading-tight">
           {panel.title}
         </h3>
-        <p className="text-white/70 text-base leading-relaxed font-light">
+        <p className="text-white/60 text-base leading-relaxed font-light">
           {panel.description}
         </p>
       </div>
@@ -84,79 +92,59 @@ const MobileCard = ({ panel, index }: { panel: Panel; index: number }) => {
 };
 
 const Card = ({ panel, index, progress, total }: { panel: Panel; index: number; progress: MotionValue<number>; total: number }) => {
-  const target = index / (total - 1 || 1);
-  const range = 1 / (total - 1 || 1);
   
-  const input = [];
-  const opacityOutput = [];
-  const yOutput = [];
-  const scaleOutput = [];
-  const rotateOutput = [];
-
-  if (target - range >= 0) {
-    input.push(target - range);
-    opacityOutput.push(0);
-    yOutput.push(100);
-    scaleOutput.push(0.8);
-    rotateOutput.push(5);
-  }
-
-  input.push(target);
-  opacityOutput.push(1);
-  yOutput.push(0);
-  scaleOutput.push(1);
-  rotateOutput.push(0);
-
-  if (target + range <= 1) {
-    input.push(target + range);
-    opacityOutput.push(0);
-    yOutput.push(-100);
-    scaleOutput.push(0.8);
-    rotateOutput.push(-5);
-  }
+  // Parallax effect for the image inside the card
+  const target = index / Math.max(1, total - 1);
+  const range = 1 / Math.max(1, total - 1);
   
-  const imageScale = useTransform(progress, input, scaleOutput);
-  const imageRotate = useTransform(progress, input, rotateOutput);
-  const textY = useTransform(progress, input, yOutput);
-  const opacity = useTransform(progress, input, opacityOutput);
+  // Image scales up slightly as it approaches center
+  const scale = useTransform(progress, (v) => {
+    const dist = Math.abs(v - target);
+    if (dist >= range) return 0.85;
+    const factor = dist / range;
+    return 1 - factor * 0.15;
+  });
+  
+  const opacity = useTransform(progress, (v) => {
+    const dist = Math.abs(v - target);
+    if (dist >= range) return 0.3;
+    const factor = dist / range;
+    return 1 - factor * 0.7;
+  });
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center shrink-0 relative overflow-hidden group">
+    <motion.div style={{ scale, opacity }} className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
       
-      {/* Immersive Background Image */}
-      {panel.image && (
-        <motion.div 
-          style={{ scale: imageScale, rotate: imageRotate, opacity }}
-          className="absolute inset-0 z-0"
-        >
-           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
-           <div className="absolute inset-0 bg-black/30 z-10 group-hover:bg-transparent transition-colors duration-1000" />
-           <img 
-             src={panel.image} 
-             alt={panel.title} 
-             className="w-full h-full object-cover"
-           />
-        </motion.div>
-      )}
-
-      {/* Foreground Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-8 lg:px-24 w-full h-full flex flex-col justify-end pb-32">
-        <motion.div 
-          style={{ opacity, y: textY }}
-          className="max-w-4xl"
-        >
-          <div className="flex items-center gap-6 mb-8">
-            <span className="text-accent font-mono text-3xl lg:text-5xl font-bold opacity-80">0{index + 1}</span>
-            <div className="h-px w-24 bg-accent/50" />
-          </div>
-          <h3 className="font-heading text-5xl lg:text-8xl xl:text-9xl font-bold mb-8 text-white leading-none tracking-tighter">
-            {panel.title}
-          </h3>
-          <p className="text-white/70 text-lg lg:text-2xl leading-relaxed max-w-2xl font-light backdrop-blur-sm bg-black/10 p-6 rounded-3xl border border-white/5">
-            {panel.description}
-          </p>
-        </motion.div>
+      {/* Image Section */}
+      <div className="lg:col-span-7 relative">
+        <div className="aspect-[16/10] rounded-[2rem] sm:rounded-[3rem] overflow-hidden relative group shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)] border border-white/5 bg-white/5">
+          <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 mix-blend-overlay" />
+          {panel.image && (
+            <img 
+              src={panel.image} 
+              alt={panel.title} 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
+            />
+          )}
+        </div>
       </div>
-    </div>
+
+      {/* Text Section */}
+      <div className="lg:col-span-5 flex flex-col justify-center">
+        <div className="flex items-center gap-6 mb-8">
+          <span className="text-accent font-mono text-2xl lg:text-3xl font-bold opacity-80">0{index + 1}</span>
+          <div className="h-px w-20 bg-accent/50" />
+        </div>
+        
+        <h3 className="font-heading text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white leading-tight">
+          {panel.title}
+        </h3>
+        
+        <p className="text-white/60 text-lg lg:text-xl leading-relaxed font-light">
+          {panel.description}
+        </p>
+      </div>
+
+    </motion.div>
   );
 };

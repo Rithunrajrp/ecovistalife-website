@@ -30,13 +30,13 @@ I authorize Ecovistalife and its representatives to Call, SMS, Email or WhatsApp
 
 ![Ecovistalife logo transparent 01](http://ecovistalife.in/wp-content/uploads/2024/11/Ecovistalife-logo-transparent-01.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/phone-2.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/envelope.svg)
+![img](/Images/stock/property_developers.png)
 
 - Home
 - About Us

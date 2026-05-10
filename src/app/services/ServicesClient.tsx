@@ -8,8 +8,30 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 import { 
   Camera, CloudRain, Lightbulb, Footprints, Activity, 
   Home, Users, Trophy, Gamepad2, Dumbbell, Shield, 
-  Smile, Database, ShieldCheck, CheckCircle2 
+  Smile, Database, ShieldCheck, CheckCircle2, Palmtree
 } from 'lucide-react';
+import AmenityCard from '@/components/AmenityCard';
+
+const getAmenityImage = (amenity: string) => {
+  const lower = amenity.toLowerCase();
+  if (lower.includes('cctv') || lower.includes('camera')) return '/Images/amenities/cctv.png';
+  if (lower.includes('jogging') || lower.includes('track')) return '/Images/amenities/jogging.png';
+  if (lower.includes('gym') || lower.includes('fitness')) return '/Images/amenities/gym.png';
+  if (lower.includes('kids') || lower.includes('children') || lower.includes('play')) return '/Images/amenities/kids_play.png';
+  if (lower.includes('garden') || lower.includes('park') || lower.includes('landscape')) return '/Images/amenities/garden.png';
+  if (lower.includes('light') || lower.includes('led')) return '/Images/amenities/lights.png';
+  if (lower.includes('clubhouse')) return '/Images/amenities/clubhouse.png';
+  if (lower.includes('security') || lower.includes('guard')) return '/Images/amenities/security.png';
+  if (lower.includes('water') || lower.includes('drain')) return '/Images/amenities/drain.png';
+  if (lower.includes('yoga') || lower.includes('health')) return '/Images/amenities/yoga.png';
+  if (lower.includes('gazebo') || lower.includes('seating')) return '/Images/amenities/gazebo.png';
+  if (lower.includes('senior') || lower.includes('citizen')) return '/Images/amenities/senior_citizen.png';
+  if (lower.includes('turf') || lower.includes('court')) return '/Images/amenities/turf.png';
+  if (lower.includes('wall') || lower.includes('compound')) return '/Images/amenities/compound_wall.png';
+  if (lower.includes('tank') || lower.includes('storage')) return '/Images/amenities/water_tank.png';
+  if (lower.includes('mediterranean') || lower.includes('themed park')) return '/Images/amenities/garden.png';
+  return null;
+};
 
 const getAmenityIcon = (amenity: string, size = 32) => {
   const lower = amenity.toLowerCase();
@@ -27,14 +49,15 @@ const getAmenityIcon = (amenity: string, size = 32) => {
   if (lower.includes('kids') || lower.includes('children')) return <Smile size={size} />;
   if (lower.includes('tank') || lower.includes('storage')) return <Database size={size} />;
   if (lower.includes('security') || lower.includes('guard')) return <ShieldCheck size={size} />;
+  if (lower.includes('mediterranean') || lower.includes('themed park')) return <Palmtree size={size} />;
   return <CheckCircle2 size={size} />;
 };
 
 const AMENITIES = [
-  'CCTV Surveillance', 'Storm Water Drain', 'LED Street Lights', 'Jogging Track',
-  'Yoga Deck', 'Gazebo Seating', 'Senior Citizen Park', 'Turf Court',
-  'Open Play Area', 'Outdoor Gym', 'Compound Wall', 'Kids\' Play Zone',
-  'Overhead Tank', '24/7 Security',
+  'CCTV', 'Drainage', 'LED Lights', 'Jogging',
+  'Yoga Deck', 'Gazebo', 'Senior Park', 'Sports Turf',
+  'Play Area', 'Outdoor Gym', 'Compound Wall', 'Kids Play',
+  'Water Tank', 'Security', 'Mediterranean',
 ];
 
 const SERVICES = [
@@ -98,23 +121,15 @@ export default function ServicesClient() {
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold">EcoVistaLife Amenities</h2>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
             {AMENITIES.map((amenity, i) => (
-              <motion.div 
+              <AmenityCard 
                 key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (i % 4) * 0.1 }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-accent/50 transition-all duration-500 group flex flex-col items-center justify-center text-center gap-6"
-              >
-                <div className="text-accent/50 group-hover:text-accent group-hover:scale-110 transition-all duration-500">
-                  {getAmenityIcon(amenity, 40)}
-                </div>
-                <span className="text-text-secondary group-hover:text-white transition-colors font-medium text-sm md:text-base">
-                  {amenity}
-                </span>
-              </motion.div>
+                name={amenity} 
+                index={i}
+                image={getAmenityImage(amenity)}
+                icon={getAmenityIcon(amenity)}
+              />
             ))}
           </div>
         </div>

@@ -90,65 +90,65 @@ The best places to buy land in Coimbatore can vary based on your needs
 
 - Saravanampatti- Mettupalayam- Karamadai- Kovaipudur- Ganapathy
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/09/file-20.webp)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/09/file-19.webp)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/09/file-18.webp)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/09/file-17.webp)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/09/file-16.webp)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/09/file-15.webp)
+![img](/Images/stock/property_developers.png)
 
-![Image](https://ecovistalife.in/wp-content/uploads/2024/09/file-20.webp)
+![Image](/Images/stock/property_developers.png)
 
-![Image](https://ecovistalife.in/wp-content/uploads/2024/09/file-19.webp)
+![Image](/Images/stock/property_developers.png)
 
-![Image](https://ecovistalife.in/wp-content/uploads/2024/09/file-18.webp)
+![Image](/Images/stock/property_developers.png)
 
-![Image](https://ecovistalife.in/wp-content/uploads/2024/09/file-17.webp)
+![Image](/Images/stock/property_developers.png)
 
-![Image](https://ecovistalife.in/wp-content/uploads/2024/09/file-16.webp)
+![Image](/Images/stock/property_developers.png)
 
-![Image](https://ecovistalife.in/wp-content/uploads/2024/09/file-15.webp)
+![Image](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-left.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/about_1_3-1.png)
+![img](/Images/stock/property_developers.png)
 
 ![img](https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/section_shape_2_1.png)
 
 ![Shape Image](https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/section_shape_2_1-1.png)
 
-![freepik__candid image photography natural textures highly r__93783](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__93783.jpeg)
+![freepik__candid image photography natural textures highly r__93783](/Images/stock/property_developers.png)
 
-![freepik__a beautifully designed elevation arch marked with __93784](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__a-beautifully-designed-elevation-arch-marked-with-__93784.jpeg)
+![freepik__a beautifully designed elevation arch marked with __93784](/Images/stock/property_developers.png)
 
-![freepik__a beautifully designed elevation arch marked with __93785](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__a-beautifully-designed-elevation-arch-marked-with-__93785.jpeg)
+![freepik__a beautifully designed elevation arch marked with __93785](/Images/stock/property_developers.png)
 
-![freepik__candid image photography natural textures highly r__93780](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__93780.jpeg)
+![freepik__candid image photography natural textures highly r__93780](/Images/stock/property_developers.png)
 
-![freepik__35mm film photography a hispanic grandfather with __93781](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__35mm-film-photography-a-hispanic-grandfather-with-__93781.jpeg)
+![freepik__35mm film photography a hispanic grandfather with __93781](/Images/stock/property_developers.png)
 
-![freepik__35mm film photography a peaceful park at dawn with__93782](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__35mm-film-photography-a-peaceful-park-at-dawn-with__93782.jpeg)
+![freepik__35mm film photography a peaceful park at dawn with__93782](/Images/stock/property_developers.png)
 
-![icon](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![icon](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/customer-care.gif)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/skill.gif)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/best-customer-experience.gif)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/eco.gif)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__63754-1024x701.jpeg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__63758-1024x701.jpeg)
+![image](/Images/stock/property_developers.png)
 
 - Quality real estate services
 - 100% Satisfaction guarantee
@@ -200,13 +200,13 @@ I authorize Ecovistalife and its representatives to Call, SMS, Email or WhatsApp
 
 ![Ecovistalife logo transparent 01](http://ecovistalife.in/wp-content/uploads/2024/11/Ecovistalife-logo-transparent-01.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/phone-2.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/envelope.svg)
+![img](/Images/stock/property_developers.png)
 
 - Home
 - About Us

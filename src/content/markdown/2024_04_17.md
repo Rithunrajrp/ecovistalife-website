@@ -277,235 +277,235 @@ No, the type of home you can build on a residential plot is limited by zoning la
 
 Yes, plot loans are offered by many banks and financial institutions. Check interest rates and terms to find the best option for your needs.
 
-![Ecovistalife logo with trademark 3](https://ecovistalife.in/wp-content/uploads/2024/09/Ecovistalife-logo-with-trademark-3.png)
+![Ecovistalife logo with trademark 3](/Images/stock/property_developers.png)
 
 ![Shape Image](https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/section_shape_2_3.png)
 
-![Services icons 01](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-01.png)
+![Services icons 01](/Images/stock/property_developers.png)
 
-![Your Ideal Plot Solutions 1](https://ecovistalife.in/wp-content/uploads/2024/09/Your-Ideal-Plot-Solutions-1.webp)
+![Your Ideal Plot Solutions 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 02](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-02.png)
+![Services icons 02](/Images/stock/property_developers.png)
 
-![Safe](https://ecovistalife.in/wp-content/uploads/2024/09/Safe.webp)
+![Safe](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 03 03](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-03-03.png)
+![Services icons 03 03](/Images/stock/property_developers.png)
 
-![framing landscape while traveling 1](https://ecovistalife.in/wp-content/uploads/2024/09/framing-landscape-while-traveling-1.webp)
+![framing landscape while traveling 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 04](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-04.png)
+![Services icons 04](/Images/stock/property_developers.png)
 
-![Dedicated Support 1](https://ecovistalife.in/wp-content/uploads/2024/09/Dedicated-Support-1.webp)
+![Dedicated Support 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 01](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-01.png)
+![Services icons 01](/Images/stock/property_developers.png)
 
-![Your Ideal Plot Solutions 1](https://ecovistalife.in/wp-content/uploads/2024/09/Your-Ideal-Plot-Solutions-1.webp)
+![Your Ideal Plot Solutions 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 02](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-02.png)
+![Services icons 02](/Images/stock/property_developers.png)
 
-![Safe](https://ecovistalife.in/wp-content/uploads/2024/09/Safe.webp)
+![Safe](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 03 03](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-03-03.png)
+![Services icons 03 03](/Images/stock/property_developers.png)
 
-![framing landscape while traveling 1](https://ecovistalife.in/wp-content/uploads/2024/09/framing-landscape-while-traveling-1.webp)
+![framing landscape while traveling 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 04](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-04.png)
+![Services icons 04](/Images/stock/property_developers.png)
 
-![Dedicated Support 1](https://ecovistalife.in/wp-content/uploads/2024/09/Dedicated-Support-1.webp)
+![Dedicated Support 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 01](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-01.png)
+![Services icons 01](/Images/stock/property_developers.png)
 
-![Your Ideal Plot Solutions 1](https://ecovistalife.in/wp-content/uploads/2024/09/Your-Ideal-Plot-Solutions-1.webp)
+![Your Ideal Plot Solutions 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 02](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-02.png)
+![Services icons 02](/Images/stock/property_developers.png)
 
-![Safe](https://ecovistalife.in/wp-content/uploads/2024/09/Safe.webp)
+![Safe](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 03 03](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-03-03.png)
+![Services icons 03 03](/Images/stock/property_developers.png)
 
-![framing landscape while traveling 1](https://ecovistalife.in/wp-content/uploads/2024/09/framing-landscape-while-traveling-1.webp)
+![framing landscape while traveling 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![Services icons 04](https://ecovistalife.in/wp-content/uploads/2024/09/Services-icons-04.png)
+![Services icons 04](/Images/stock/property_developers.png)
 
-![Dedicated Support 1](https://ecovistalife.in/wp-content/uploads/2024/09/Dedicated-Support-1.webp)
+![Dedicated Support 1](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![img](/Images/stock/property_developers.png)
 
-![location unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/location-unscreen.gif)
+![location unscreen](/Images/stock/property_developers.png)
 
-![location unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/location-unscreen.gif)
+![location unscreen](/Images/stock/property_developers.png)
 
-![location unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/location-unscreen.gif)
+![location unscreen](/Images/stock/property_developers.png)
 
-![earth unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/earth-unscreen.gif)
+![earth unscreen](/Images/stock/property_developers.png)
 
-![earth unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/earth-unscreen.gif)
+![earth unscreen](/Images/stock/property_developers.png)
 
-![earth unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/earth-unscreen.gif)
+![earth unscreen](/Images/stock/property_developers.png)
 
-![building unscreen 1](https://ecovistalife.in/wp-content/uploads/2024/11/building-unscreen-1.gif)
+![building unscreen 1](/Images/stock/property_developers.png)
 
-![building unscreen 1](https://ecovistalife.in/wp-content/uploads/2024/11/building-unscreen-1.gif)
+![building unscreen 1](/Images/stock/property_developers.png)
 
-![building unscreen 1](https://ecovistalife.in/wp-content/uploads/2024/11/building-unscreen-1.gif)
+![building unscreen 1](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/09/ecovista-2.png)
+![image](/Images/stock/property_developers.png)
 
-![investment unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/investment-unscreen.gif)
+![investment unscreen](/Images/stock/property_developers.png)
 
-![investment unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/investment-unscreen.gif)
+![investment unscreen](/Images/stock/property_developers.png)
 
-![investment unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/investment-unscreen.gif)
+![investment unscreen](/Images/stock/property_developers.png)
 
-![high quality unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/high-quality-unscreen.gif)
+![high quality unscreen](/Images/stock/property_developers.png)
 
-![high quality unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/high-quality-unscreen.gif)
+![high quality unscreen](/Images/stock/property_developers.png)
 
-![high quality unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/high-quality-unscreen.gif)
+![high quality unscreen](/Images/stock/property_developers.png)
 
-![shield unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/shield-unscreen.gif)
+![shield unscreen](/Images/stock/property_developers.png)
 
-![shield unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/shield-unscreen.gif)
+![shield unscreen](/Images/stock/property_developers.png)
 
-![shield unscreen](https://ecovistalife.in/wp-content/uploads/2024/11/shield-unscreen.gif)
+![shield unscreen](/Images/stock/property_developers.png)
 
-![customer satisfaction unscreen 1](https://ecovistalife.in/wp-content/uploads/2024/11/customer-satisfaction-unscreen-1.gif)
+![customer satisfaction unscreen 1](/Images/stock/property_developers.png)
 
-![customer satisfaction unscreen 1](https://ecovistalife.in/wp-content/uploads/2024/11/customer-satisfaction-unscreen-1.gif)
+![customer satisfaction unscreen 1](/Images/stock/property_developers.png)
 
-![customer satisfaction unscreen 1](https://ecovistalife.in/wp-content/uploads/2024/11/customer-satisfaction-unscreen-1.gif)
+![customer satisfaction unscreen 1](/Images/stock/property_developers.png)
 
-![surveillance system](https://ecovistalife.in/wp-content/uploads/2024/09/surveillance-system.jpg)
+![surveillance system](/Images/stock/property_developers.png)
 
-![cctv camera_5792758](https://ecovistalife.in/wp-content/uploads/2024/09/cctv-camera_5792758.webp)
+![cctv camera_5792758](/Images/stock/property_developers.png)
 
-![Storm water drain](https://ecovistalife.in/wp-content/uploads/2024/09/Storm-water-drain.webp)
+![Storm water drain](/Images/stock/property_developers.png)
 
-![Storm water drain 56 size](https://ecovistalife.in/wp-content/uploads/2024/09/Storm-water-drain-56-size.webp)
+![Storm water drain 56 size](/Images/stock/property_developers.png)
 
-![LED street lights](https://ecovistalife.in/wp-content/uploads/2024/09/LED-street-lights.webp)
+![LED street lights](/Images/stock/property_developers.png)
 
-![street lamp_5621499](https://ecovistalife.in/wp-content/uploads/2024/09/street-lamp_5621499.webp)
+![street lamp_5621499](/Images/stock/property_developers.png)
 
-![Jogging track](https://ecovistalife.in/wp-content/uploads/2024/09/Jogging-track.webp)
+![Jogging track](/Images/stock/property_developers.png)
 
-![running_1444970](https://ecovistalife.in/wp-content/uploads/2024/09/running_1444970.webp)
+![running_1444970](/Images/stock/property_developers.png)
 
-![man doing yoga outside mat with copy space scaled](https://ecovistalife.in/wp-content/uploads/2024/10/man-doing-yoga-outside-mat-with-copy-space-scaled.jpg)
+![man doing yoga outside mat with copy space scaled](/Images/stock/property_developers.png)
 
-![running_1444970](https://ecovistalife.in/wp-content/uploads/2024/09/running_1444970.webp)
+![running_1444970](/Images/stock/property_developers.png)
 
-![sun loungers with blue parasols scaled](https://ecovistalife.in/wp-content/uploads/2024/10/sun-loungers-with-blue-parasols-scaled.jpg)
+![sun loungers with blue parasols scaled](/Images/stock/property_developers.png)
 
-![kids](https://ecovistalife.in/wp-content/uploads/2024/09/kids.webp)
+![kids](/Images/stock/property_developers.png)
 
-![senior citizen park](https://ecovistalife.in/wp-content/uploads/2024/09/senior-citizen-park.webp)
+![senior citizen park](/Images/stock/property_developers.png)
 
-![park_4734550 _1_](https://ecovistalife.in/wp-content/uploads/2024/09/park_4734550-_1_.webp)
+![park_4734550 _1_](/Images/stock/property_developers.png)
 
-![empty football field green grass scaled](https://ecovistalife.in/wp-content/uploads/2024/10/empty-football-field-green-grass-scaled.jpg)
+![empty football field green grass scaled](/Images/stock/property_developers.png)
 
-![family lawn 3](https://ecovistalife.in/wp-content/uploads/2024/09/family-lawn-3.webp)
+![family lawn 3](/Images/stock/property_developers.png)
 
-![Open play area](https://ecovistalife.in/wp-content/uploads/2024/09/Open-play-area.webp)
+![Open play area](/Images/stock/property_developers.png)
 
-![running_1444970](https://ecovistalife.in/wp-content/uploads/2024/09/running_1444970.webp)
+![running_1444970](/Images/stock/property_developers.png)
 
-![Outdoor gym](https://ecovistalife.in/wp-content/uploads/2024/09/Outdoor-gym.webp)
+![Outdoor gym](/Images/stock/property_developers.png)
 
-![outdoor gym 1](https://ecovistalife.in/wp-content/uploads/2024/09/outdoor-gym-1.webp)
+![outdoor gym 1](/Images/stock/property_developers.png)
 
-![compound wall](https://ecovistalife.in/wp-content/uploads/2024/09/compound-wall.webp)
+![compound wall](/Images/stock/property_developers.png)
 
-![Compound wall 1](https://ecovistalife.in/wp-content/uploads/2024/09/Compound-wall-1.webp)
+![Compound wall 1](/Images/stock/property_developers.png)
 
-![Kids play zone](https://ecovistalife.in/wp-content/uploads/2024/09/Kids-play-zone.webp)
+![Kids play zone](/Images/stock/property_developers.png)
 
-![kids](https://ecovistalife.in/wp-content/uploads/2024/09/kids.webp)
+![kids](/Images/stock/property_developers.png)
 
-![over head tank](https://ecovistalife.in/wp-content/uploads/2024/09/over-head-tank.webp)
+![over head tank](/Images/stock/property_developers.png)
 
-![overhead tank](https://ecovistalife.in/wp-content/uploads/2024/09/overhead-tank.webp)
+![overhead tank](/Images/stock/property_developers.png)
 
-![security guards](https://ecovistalife.in/wp-content/uploads/2024/09/security-guards.jpg)
+![security guards](/Images/stock/property_developers.png)
 
-![security](https://ecovistalife.in/wp-content/uploads/2024/09/security.webp)
+![security](/Images/stock/property_developers.png)
 
-![surveillance system](https://ecovistalife.in/wp-content/uploads/2024/09/surveillance-system.jpg)
+![surveillance system](/Images/stock/property_developers.png)
 
-![cctv camera_5792758](https://ecovistalife.in/wp-content/uploads/2024/09/cctv-camera_5792758.webp)
+![cctv camera_5792758](/Images/stock/property_developers.png)
 
-![Storm water drain](https://ecovistalife.in/wp-content/uploads/2024/09/Storm-water-drain.webp)
+![Storm water drain](/Images/stock/property_developers.png)
 
-![Storm water drain 56 size](https://ecovistalife.in/wp-content/uploads/2024/09/Storm-water-drain-56-size.webp)
+![Storm water drain 56 size](/Images/stock/property_developers.png)
 
-![LED street lights](https://ecovistalife.in/wp-content/uploads/2024/09/LED-street-lights.webp)
+![LED street lights](/Images/stock/property_developers.png)
 
-![street lamp_5621499](https://ecovistalife.in/wp-content/uploads/2024/09/street-lamp_5621499.webp)
+![street lamp_5621499](/Images/stock/property_developers.png)
 
-![Jogging track](https://ecovistalife.in/wp-content/uploads/2024/09/Jogging-track.webp)
+![Jogging track](/Images/stock/property_developers.png)
 
-![running_1444970](https://ecovistalife.in/wp-content/uploads/2024/09/running_1444970.webp)
+![running_1444970](/Images/stock/property_developers.png)
 
-![man doing yoga outside mat with copy space scaled](https://ecovistalife.in/wp-content/uploads/2024/10/man-doing-yoga-outside-mat-with-copy-space-scaled.jpg)
+![man doing yoga outside mat with copy space scaled](/Images/stock/property_developers.png)
 
-![running_1444970](https://ecovistalife.in/wp-content/uploads/2024/09/running_1444970.webp)
+![running_1444970](/Images/stock/property_developers.png)
 
-![sun loungers with blue parasols scaled](https://ecovistalife.in/wp-content/uploads/2024/10/sun-loungers-with-blue-parasols-scaled.jpg)
+![sun loungers with blue parasols scaled](/Images/stock/property_developers.png)
 
-![kids](https://ecovistalife.in/wp-content/uploads/2024/09/kids.webp)
+![kids](/Images/stock/property_developers.png)
 
-![senior citizen park](https://ecovistalife.in/wp-content/uploads/2024/09/senior-citizen-park.webp)
+![senior citizen park](/Images/stock/property_developers.png)
 
-![park_4734550 _1_](https://ecovistalife.in/wp-content/uploads/2024/09/park_4734550-_1_.webp)
+![park_4734550 _1_](/Images/stock/property_developers.png)
 
-![empty football field green grass scaled](https://ecovistalife.in/wp-content/uploads/2024/10/empty-football-field-green-grass-scaled.jpg)
+![empty football field green grass scaled](/Images/stock/property_developers.png)
 
-![family lawn 3](https://ecovistalife.in/wp-content/uploads/2024/09/family-lawn-3.webp)
+![family lawn 3](/Images/stock/property_developers.png)
 
-![Open play area](https://ecovistalife.in/wp-content/uploads/2024/09/Open-play-area.webp)
+![Open play area](/Images/stock/property_developers.png)
 
-![running_1444970](https://ecovistalife.in/wp-content/uploads/2024/09/running_1444970.webp)
+![running_1444970](/Images/stock/property_developers.png)
 
-![Outdoor gym](https://ecovistalife.in/wp-content/uploads/2024/09/Outdoor-gym.webp)
+![Outdoor gym](/Images/stock/property_developers.png)
 
-![outdoor gym 1](https://ecovistalife.in/wp-content/uploads/2024/09/outdoor-gym-1.webp)
+![outdoor gym 1](/Images/stock/property_developers.png)
 
-![compound wall](https://ecovistalife.in/wp-content/uploads/2024/09/compound-wall.webp)
+![compound wall](/Images/stock/property_developers.png)
 
-![Compound wall 1](https://ecovistalife.in/wp-content/uploads/2024/09/Compound-wall-1.webp)
+![Compound wall 1](/Images/stock/property_developers.png)
 
-![Kids play zone](https://ecovistalife.in/wp-content/uploads/2024/09/Kids-play-zone.webp)
+![Kids play zone](/Images/stock/property_developers.png)
 
-![kids](https://ecovistalife.in/wp-content/uploads/2024/09/kids.webp)
+![kids](/Images/stock/property_developers.png)
 
-![icon](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-left.svg)
+![icon](/Images/stock/property_developers.png)
 
-![icon](https://ecovistalife.in/wp-content/plugins/realar-core/assets/img/arrow-right.svg)
+![icon](/Images/stock/property_developers.png)
 
-![property developers in karamadai](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__93777.jpeg)
+![property developers in karamadai](/Images/stock/property_developers.png)
 
 ![qoute](https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/qoute.svg)
 
@@ -517,33 +517,33 @@ Yes, plot loans are offered by many banks and financial institutions. Check inte
 
 ![qoute](https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/qoute.svg)
 
-![freepik__candid image photograph](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photograph.jpg)
+![freepik__candid image photograph](/Images/stock/property_developers.png)
 
-![freepik__candid image photograph 1](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photograph-1.jpg)
+![freepik__candid image photograph 1](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__create-image-with-plots-surrounded-by-wall-and-a-g__83623.jpeg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__create-image-with-plots-surrounded-by-wall-and-a-g__83622.jpeg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__70156.jpeg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__create-image-with-plots-surrounded-by-wall-and-a-g__83623.jpeg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/freepik__create-image-with-plots-surrounded-by-wall-and-a-g__83622.jpeg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-5.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-1.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-2.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-3.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-4.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-5.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/11/Banner-1.jpg)
+![image](/Images/stock/property_developers.png)
 
 [Elegance](https://ecovistalife.in/#)
 
@@ -714,13 +714,13 @@ I authorize Ecovistalife and its representatives to Call, SMS, Email or WhatsApp
 
 ![Ecovistalife logo transparent 01](http://ecovistalife.in/wp-content/uploads/2024/11/Ecovistalife-logo-transparent-01.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/phone-2.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/envelope.svg)
+![img](/Images/stock/property_developers.png)
 
 - Home
 - About Us

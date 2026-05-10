@@ -71,10 +71,10 @@ const FALLBACK_PROJECTS: Record<string, any> = {
   frenchville: {
     title: 'Frenchville',
     slug: 'frenchville',
-    description: 'French-inspired villa plots featuring Mediterranean architecture, premium landscaping, and sustainable design in Coimbatore.',
+    description: 'French-inspired villa plots featuring Mediterranean architecture, premium landscaping, and sustainable design in Sulur, Coimbatore.',
     content: `
       <h2>About Frenchville</h2>
-      <p>Inspired by the elegance of French provincial architecture, Frenchville brings European charm to the heart of Coimbatore. This exclusive development features carefully curated villa plots designed for those who appreciate refined living.</p>
+      <p>Inspired by the elegance of French provincial architecture, Frenchville brings European charm to the heart of Sulur, Coimbatore. This exclusive development features carefully curated villa plots designed for those who appreciate refined living in a rapidly developing hub.</p>
       <h3>Key Highlights</h3>
       <ul>
         <li>French-inspired Architecture Guidelines</li>
@@ -83,7 +83,9 @@ const FALLBACK_PROJECTS: Record<string, any> = {
         <li>Eco-friendly & Sustainable Design</li>
       </ul>
       <h3>Amenities</h3>
-      <p>French-inspired Clubhouse • Mediterranean Themed Garden • CCTV Surveillance • LED Street Lights • Jogging Track • Kids Play Area • Senior Citizen Seating • Compound Wall • 24/7 Security • Rainwater Harvesting</p>
+      <p>French Clubhouse • Mediterranean Garden • CCTV Surveillance • LED Street Lights • Jogging Track • Kids Play Area • Senior Citizen Seating • Compound Wall • 24/7 Security • Rainwater Harvesting</p>
+      <h3>Location Advantage</h3>
+      <p>Sulur is one of Coimbatore's most strategic and fastest-growing residential and industrial corridors. Its proximity to the Coimbatore International Airport (15-20 mins) and excellent connectivity via the Salem-Kochi Highway (NH 544) make it an ideal choice for families and investors alike. Being home to the Sulur Air Force Base, the area enjoys enhanced security, high-quality infrastructure, and a peaceful yet well-connected lifestyle.</p>
     `,
     images: [
       '/Images/French Ville/WhatsApp Image 2026-04-10 at 3.12.21 PM1.jpeg',
@@ -93,7 +95,7 @@ const FALLBACK_PROJECTS: Record<string, any> = {
       '/Images/French Ville/WhatsApp Image 2026-04-10 at 3.11.36 PM.jpeg',
     ],
     status: 'Upcoming',
-    location: 'Coimbatore',
+    location: 'Sulur, Coimbatore',
     plotSizes: '1,500 – 3,500 sq ft',
     priceRange: 'starting from 12.49L',
     video: '/video/frenchville.mp4',

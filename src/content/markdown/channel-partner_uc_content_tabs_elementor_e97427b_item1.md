@@ -14,7 +14,7 @@ url: "https://ecovistalife.in/channel-partner/uc_content_tabs_elementor_e97427b_
 
 We appologize for any distruction to the space-time continuum. Feel free to journey back to our homepage
 
-![404 image](https://ecovistalife.in/wp-content/uploads/2024/05/error_1_1.png)
+![404 image](/Images/stock/property_developers.png)
 
 [Return To Home](https://ecovistalife.in/)
 
@@ -41,13 +41,13 @@ I authorize Ecovistalife and its representatives to Call, SMS, Email or WhatsApp
 
 ![Ecovistalife logo transparent 01](http://ecovistalife.in/wp-content/uploads/2024/11/Ecovistalife-logo-transparent-01.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/phone-2.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/envelope.svg)
+![img](/Images/stock/property_developers.png)
 
 - Home
 - About Us

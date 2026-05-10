@@ -1,11 +1,11 @@
 ---
-title: "Plots for sale in Karamadai, Coimbatore - Ecovistalife"
+title: "Plots for sale in Sulur, Coimbatore - Ecovistalife"
 slug: "/frenchville"
 url: "https://ecovistalife.in/frenchville"
-description: "Plots for sale in Karamadai starting at ₹18L. Explore 2BHK & 3BHK homes from ₹49L & ₹60L. Invest in your dream property now!"
+description: "Plots for sale in Sulur starting at ₹18L. Explore 2BHK & 3BHK homes from ₹49L & ₹60L. Invest in your dream property now!"
 ---
 
-# Plots for sale in Karamadai, Coimbatore - Ecovistalife
+# Plots for sale in Sulur, Coimbatore - Ecovistalife
 
 <!-- section: footer -->
 
@@ -30,13 +30,13 @@ I authorize Ecovistalife and its representatives to Call, SMS, Email or WhatsApp
 
 ![Ecovistalife logo transparent 01](http://ecovistalife.in/wp-content/uploads/2024/11/Ecovistalife-logo-transparent-01.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/phone-2.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/envelope.svg)
+![img](/Images/stock/property_developers.png)
 
 - Home
 - About Us

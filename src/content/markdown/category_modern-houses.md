@@ -34,15 +34,15 @@ Green Living Made Easy: How Ecovista Life Transforms House, Flat, and Land Owner
 
 Your Dream Home Awaits: Exploring Ecovista Life’s Sustainable House, Flat, and Land Offers In today’s world, sustainability and eco-friendly living are becoming increasingly important. Ecovista Life understands the need for homes that not only offer comfort and style but
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/04/Affordable-Rental.jpg)
+![image](/Images/stock/property_developers.png)
 
-![image](https://ecovistalife.in/wp-content/uploads/2024/04/image-1.jpg)
+![image](/Images/stock/property_developers.png)
 
-![Affordable Rental 85x85](https://ecovistalife.in/wp-content/uploads/2024/04/Affordable-Rental-85x85.jpg)
+![Affordable Rental 85x85](/Images/stock/property_developers.png)
 
-![image 1 85x85](https://ecovistalife.in/wp-content/uploads/2024/04/image-1-85x85.jpg)
+![image 1 85x85](/Images/stock/property_developers.png)
 
-![00d0d_iIqvWycA7u7_0jh0aA_600x450 85x85](https://ecovistalife.in/wp-content/uploads/2024/09/00d0d_iIqvWycA7u7_0jh0aA_600x450-85x85.jpg)
+![00d0d_iIqvWycA7u7_0jh0aA_600x450 85x85](/Images/stock/property_developers.png)
 
 - Green Living Made Easy: How Ecovista Life Transforms House, Flat, and Land OwnershipEnrich Your Mind Envision Your Future Education for Success
 - Your Dream Home Awaits: Exploring Ecovista Life’s Sustainable House, Flat, and Land Offers
@@ -119,13 +119,13 @@ I authorize Ecovistalife and its representatives to Call, SMS, Email or WhatsApp
 
 ![Ecovistalife logo transparent 01](http://ecovistalife.in/wp-content/uploads/2024/11/Ecovistalife-logo-transparent-01.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/location-dot.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/phone-2.svg)
+![img](/Images/stock/property_developers.png)
 
-![img](https://ecovistalife.in/wp-content/uploads/2024/05/envelope.svg)
+![img](/Images/stock/property_developers.png)
 
 - Home
 - About Us

@@ -10,8 +10,11 @@ import { cn } from '@/lib/utils';
 import { 
   Camera, CloudRain, Lightbulb, Footprints, Activity, 
   Home, Users, Trophy, Gamepad2, Dumbbell, Shield, 
-  Smile, Database, ShieldCheck, CheckCircle2, ChevronDown
+  Smile, Database, ShieldCheck, CheckCircle2, ChevronDown,
+  Palmtree
 } from 'lucide-react';
+import AmenityCard from '@/components/AmenityCard';
+import BrochureModal from '@/components/BrochureModal';
 
 const PROJECT_FAQS = [
   { q: "Are the properties DTCP/RERA approved?", a: "Yes, all our projects are fully approved by DTCP and RERA, ensuring clear titles and secure investments." },
@@ -20,9 +23,30 @@ const PROJECT_FAQS = [
   { q: "Can NRIs buy property here?", a: "Yes, NRIs can seamlessly invest. We offer virtual tours, digital documentation assistance, and dedicated NRI support." }
 ];
 
+const getAmenityImage = (amenity: string) => {
+  const lower = amenity.toLowerCase();
+  if (lower.includes('cctv') || lower.includes('camera')) return '/Images/amenities/cctv.png';
+  if (lower.includes('jogging') || lower.includes('track')) return '/Images/amenities/jogging.png';
+  if (lower.includes('gym') || lower.includes('fitness')) return '/Images/amenities/gym.png';
+  if (lower.includes('kids') || lower.includes('children') || lower.includes('play area')) return '/Images/amenities/kids_play.png';
+  if (lower.includes('garden') || lower.includes('park') || lower.includes('landscape')) return '/Images/amenities/garden.png';
+  if (lower.includes('light') || lower.includes('led')) return '/Images/amenities/lights.png';
+  if (lower.includes('clubhouse')) return '/Images/amenities/clubhouse.png';
+  if (lower.includes('security') || lower.includes('guard')) return '/Images/amenities/security.png';
+  if (lower.includes('water') || lower.includes('drain')) return '/Images/amenities/drain.png';
+  if (lower.includes('yoga') || lower.includes('health')) return '/Images/amenities/yoga.png';
+  if (lower.includes('gazebo') || lower.includes('seating')) return '/Images/amenities/gazebo.png';
+  if (lower.includes('senior') || lower.includes('citizen')) return '/Images/amenities/senior_citizen.png';
+  if (lower.includes('turf') || lower.includes('court')) return '/Images/amenities/turf.png';
+  if (lower.includes('wall') || lower.includes('compound')) return '/Images/amenities/compound_wall.png';
+  if (lower.includes('tank') || lower.includes('storage')) return '/Images/amenities/water_tank.png';
+  if (lower.includes('mediterranean') || lower.includes('themed park')) return '/Images/amenities/garden.png';
+  return null;
+};
+
 const getAmenityIcon = (amenity: string) => {
   const lower = amenity.toLowerCase();
-  const size = 20;
+  const size = 32;
   if (lower.includes('cctv') || lower.includes('camera')) return <Camera size={size} />;
   if (lower.includes('water') || lower.includes('drain')) return <CloudRain size={size} />;
   if (lower.includes('light') || lower.includes('led')) return <Lightbulb size={size} />;
@@ -37,7 +61,27 @@ const getAmenityIcon = (amenity: string) => {
   if (lower.includes('kids') || lower.includes('children')) return <Smile size={size} />;
   if (lower.includes('tank') || lower.includes('storage')) return <Database size={size} />;
   if (lower.includes('security') || lower.includes('guard')) return <ShieldCheck size={size} />;
+  if (lower.includes('mediterranean') || lower.includes('themed park')) return <Palmtree size={size} />;
   return <CheckCircle2 size={size} />;
+};
+
+const shortenAmenityName = (name: string) => {
+  const lower = name.toLowerCase();
+  if (lower.includes('cctv')) return 'CCTV';
+  if (lower.includes('jogging')) return 'Jogging Track';
+  if (lower.includes('gym')) return 'Outdoor Gym';
+  if (lower.includes('play area')) return 'Play Area';
+  if (lower.includes('play zone')) return 'Kids Play';
+  if (lower.includes('light')) return 'LED Lights';
+  if (lower.includes('water') || lower.includes('drain')) return 'Drainage';
+  if (lower.includes('security')) return 'Security';
+  if (lower.includes('wall')) return 'Compound Wall';
+  if (lower.includes('senior')) return 'Senior Park';
+  if (lower.includes('yoga')) return 'Yoga Deck';
+  if (lower.includes('gazebo')) return 'Gazebo';
+  if (lower.includes('turf')) return 'Sports Turf';
+  if (lower.includes('tank')) return 'Water Tank';
+  return name.split(' ').slice(0, 2).join(' '); // Limit to 2 words max if no match
 };
 
 interface ProjectClientProps {
@@ -62,6 +106,7 @@ export default function ProjectClient({
   const containerRef = useRef<HTMLDivElement>(null);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [videoEnded, setVideoEnded] = useState(false);
+  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -233,14 +278,15 @@ export default function ProjectClient({
                   className="mt-16"
                 >
                   <h3 className="font-heading text-3xl font-bold text-white mb-8">Premium Amenities</h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
                     {amenitiesList.map((amenity, idx) => (
-                      <div key={idx} className="bg-white/5 border border-white/5 rounded-xl p-4 flex flex-col items-center justify-center text-center gap-3 hover:bg-white/10 transition-colors group">
-                        <div className="w-12 h-12 rounded-full bg-accent-green/10 text-accent-green flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                          {getAmenityIcon(amenity)}
-                        </div>
-                        <span className="text-white/80 font-medium text-xs">{amenity}</span>
-                      </div>
+                      <AmenityCard 
+                        key={idx} 
+                        name={shortenAmenityName(amenity)} 
+                        index={idx}
+                        image={getAmenityImage(amenity)}
+                        icon={getAmenityIcon(amenity)}
+                      />
                     ))}
                   </div>
                 </motion.div>
@@ -282,14 +328,13 @@ export default function ProjectClient({
                     </Link>
                     
                     {brochure && (
-                      <a 
-                        href={brochure} 
-                        download 
+                      <button 
+                        onClick={() => setIsBrochureOpen(true)}
                         className="flex items-center justify-center gap-3 w-full py-5 rounded-full border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-all text-sm font-bold uppercase tracking-widest group"
                       >
                         <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                         Download Brochure
-                      </a>
+                      </button>
                     )}
                   </div>
                 </motion.div>
@@ -371,6 +416,13 @@ export default function ProjectClient({
           </motion.div>
         )}
       </AnimatePresence>
+
+      <BrochureModal 
+        isOpen={isBrochureOpen}
+        onClose={() => setIsBrochureOpen(false)}
+        projectName={title}
+        brochureUrl={brochure || ''}
+      />
 
       {/* Project FAQs Section */}
       <SectionWrapper className="bg-bg-primary pt-0 overflow-hidden">

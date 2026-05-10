@@ -8,6 +8,8 @@ import PageHeader from '@/components/ui/PageHeader';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import MagneticButton from '@/components/MagneticButton';
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import BrochureModal from '@/components/BrochureModal';
 
 const PROJECTS = [
   {
@@ -38,12 +40,14 @@ const PROJECTS = [
     description: 'Exclusive villa plots featuring French-inspired architecture and Mediterranean landscaping in a prime location.',
     image: '/Images/French Ville/WhatsApp Image 2026-04-10 at 3.05.14 PM.jpeg',
     status: 'Upcoming',
-    location: 'Coimbatore',
+    location: 'Sulur, Coimbatore',
     id: '03'
   },
 ];
 
 export default function ProjectsPage() {
+  const [activeBrochure, setActiveBrochure] = useState<{ url: string, title: string } | null>(null);
+
   return (
     <main className="bg-bg-primary min-h-screen selection:bg-accent selection:text-black">
       <PageHeader 
@@ -54,9 +58,21 @@ export default function ProjectsPage() {
 
       <div className="space-y-40 pb-40">
         {PROJECTS.map((project, index) => (
-          <ProjectSection key={project.slug} project={project} index={index} />
+          <ProjectSection 
+            key={project.slug} 
+            project={project} 
+            index={index} 
+            onDownload={(url, title) => setActiveBrochure({ url, title })}
+          />
         ))}
       </div>
+
+      <BrochureModal 
+        isOpen={!!activeBrochure}
+        onClose={() => setActiveBrochure(null)}
+        projectName={activeBrochure?.title || ''}
+        brochureUrl={activeBrochure?.url || ''}
+      />
 
       <Footer 
         heading="Begin Your Journey" 
@@ -67,7 +83,11 @@ export default function ProjectsPage() {
   );
 }
 
-function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index: number }) {
+function ProjectSection({ project, index, onDownload }: { 
+  project: typeof PROJECTS[0], 
+  index: number,
+  onDownload: (url: string, title: string) => void
+}) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -160,9 +180,12 @@ function ProjectSection({ project, index }: { project: typeof PROJECTS[0], index
                 </MagneticButton>
               </Link>
               {project.brochure && (
-                <a href={project.brochure} download className="px-8 py-4 text-xs uppercase tracking-widest border border-white/10 hover:bg-white/5 transition-colors rounded-full text-white/60 hover:text-white">
+                <button 
+                  onClick={() => onDownload(project.brochure!, project.title)}
+                  className="px-8 py-4 text-xs uppercase tracking-widest border border-white/10 hover:bg-white/5 transition-colors rounded-full text-white/60 hover:text-white"
+                >
                   Download Brochure
-                </a>
+                </button>
               )}
             </div>
           </motion.div>

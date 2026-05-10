@@ -23,7 +23,7 @@ const HERO_IMAGES = [
 ];
 
 const FEATURES = [
-  { title: 'Prime Location', description: 'Karamadai & Coimbatore — where peace meets connectivity.' },
+  { title: 'Prime Location', description: 'Sulur, Karamadai & Coimbatore — where peace meets connectivity.' },
   { title: 'High Returns', description: 'Smart investment. Growing demand. Proven appreciation.' },
   { title: 'Eco-Friendly Living', description: 'Sustainable by design. Modern by choice.' },
   { title: 'World-Class Amenities', description: 'Gardens, clubhouse, jogging tracks & 24/7 security.' },
@@ -57,7 +57,7 @@ export default function Home() {
     <main className="bg-bg-primary min-h-screen">
       <Hero
         heading="Premium Lands. Exceptional Life."
-        body="Invest in a legacy of sustainable luxury. We create high-appreciation gated communities and premium villa plots across Coimbatore and Karamadai."
+        body="Invest in a legacy of sustainable luxury. We create high-appreciation gated communities and premium villa plots across Coimbatore, Karamadai and Sulur."
         images={HERO_IMAGES}
         buttons={[{ text: 'Explore Portfolio', href: '/projects' }]}
       />

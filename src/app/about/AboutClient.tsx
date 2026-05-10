@@ -76,9 +76,9 @@ export default function AboutClient() {
             <div className="aspect-[4/5] sm:aspect-[4/5] w-full rounded-2xl sm:rounded-[2rem] overflow-hidden group">
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10" />
               <img 
-                src="https://ecovistalife.in/wp-content/uploads/2024/09/file-20.webp" 
+                src="/Images/stock/property_developers.png" 
                 alt="EcoVistaLife Architecture" 
-                className="w-full h-full object-cover grayscale opacity-80 transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100"
+                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
               />
             </div>
           </motion.div>

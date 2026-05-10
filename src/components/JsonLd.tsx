@@ -31,6 +31,7 @@ export default function JsonLd() {
     areaServed: [
       { "@type": "City", name: "Coimbatore" },
       { "@type": "City", name: "Karamadai" },
+      { "@type": "City", name: "Sulur" },
       { "@type": "City", name: "Mettupalayam" },
     ],
     openingHoursSpecification: [
@@ -90,7 +91,7 @@ export default function JsonLd() {
         position: 1,
         name: "Projects",
         description:
-          "Explore our premium gated community projects — Gardenia, Mount Shadows & French Ville in Coimbatore.",
+          "Explore our premium gated community projects — Gardenia, Mount Shadows & French Ville in Coimbatore and Sulur.",
         url: `${SITE_URL}/projects`,
       },
       {

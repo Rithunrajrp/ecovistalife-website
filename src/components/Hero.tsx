@@ -155,7 +155,7 @@ export default function Hero({ heading, body, image, images, buttons }: HeroProp
             <div className="absolute -top-10 -right-10 w-24 h-24 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/40 transition-all" />
             <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold mb-4 block">New Launch</span>
             <h3 className="font-heading text-3xl font-bold text-white mb-4 leading-tight">French Ville <br /> Luxury Plots</h3>
-            <p className="text-white/40 text-xs leading-relaxed mb-6">Experience European charm in the heart of Karamadai. Pre-launch offers starting now.</p>
+            <p className="text-white/40 text-xs leading-relaxed mb-6">Experience European charm in the heart of Sulur. Pre-launch offers starting now.</p>
             <Link href="/projects/frenchville" className="text-white text-[10px] uppercase tracking-widest font-bold border-b border-accent pb-1 inline-block hover:text-accent transition-colors">Explore Launch</Link>
           </div>
 
