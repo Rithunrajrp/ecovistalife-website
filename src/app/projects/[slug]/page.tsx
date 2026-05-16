@@ -100,6 +100,7 @@ const FALLBACK_PROJECTS: Record<string, any> = {
     priceRange: 'starting from 12.49L',
     video: '/video/frenchville.mp4',
     endImage: '/Images/French Ville/frenchville_bg.jpeg',
+    brochure: '/brochure/FrenchVilla.pdf',
   },
   ecolife: {
     title: 'EcoLife',

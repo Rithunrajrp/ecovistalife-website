@@ -11,6 +11,25 @@ export default function LoadingScreen() {
     // Lock scroll
     document.body.style.overflow = 'hidden';
 
+    // Video Assets to Preload
+    const VIDEO_ASSETS = [
+      '/testimonial video/testimonial-video-landscape-1.mp4',
+      '/testimonial video/testimonial-video-landscape-2.mp4',
+      '/testimonial video/testimonial-video-portrait-1.mp4',
+      '/testimonial video/testimonial-video-portrait-2.mp4',
+      '/testimonial video/testimonial-video-portrait-3.mp4',
+      '/testimonial video/testimonial-video-portrait-4.mp4',
+    ];
+
+    // Prefetch videos
+    VIDEO_ASSETS.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      link.as = 'video';
+      document.head.appendChild(link);
+    });
+
     // Simulate progress
     const interval = setInterval(() => {
       setProgress((prev) => {

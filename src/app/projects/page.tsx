@@ -41,6 +41,7 @@ const PROJECTS = [
     image: '/Images/French Ville/WhatsApp Image 2026-04-10 at 3.05.14 PM.jpeg',
     status: 'Upcoming',
     location: 'Sulur, Coimbatore',
+    brochure: '/brochure/FrenchVilla.pdf',
     id: '03'
   },
 ];

@@ -13,15 +13,70 @@ const CUSTOMER_IMAGES = [
   '/Images/Customers/571B3096.JPG',
   '/Images/Customers/571B3098.JPG',
   '/Images/Customers/571B3101.JPG',
-  '/Images/Customers/571B3104.JPG',
+  '/Images/Customers/571B3102.JPG',
+  '/Images/Customers/571B3108.JPG',
+  '/Images/Customers/571B3109.JPG',
+  '/Images/Customers/571B3110.JPG',
+  '/Images/Customers/571B3111.JPG',
+  '/Images/Customers/571B3112.JPG',
+  '/Images/Customers/571B3116.JPG',
+  '/Images/Customers/571B3117.JPG',
   '/Images/Customers/IMG_9593.JPG',
   '/Images/Customers/IMG_9601.JPG',
   '/Images/Customers/IMG_9607.JPG',
+  '/Images/Customers/IMG_9611.JPG',
+  '/Images/Customers/IMG_9613.JPG',
+  '/Images/Customers/IMG_9615.JPG',
+  '/Images/Customers/IMG_9621.JPG',
+  '/Images/Customers/IMG_9624.JPG',
+  '/Images/Customers/IMG_9625.JPG',
+  '/Images/Customers/IMG_9628.JPG',
+  '/Images/Customers/IMG_9629.JPG',
+  '/Images/Customers/IMG_9632.JPG',
+  '/Images/Customers/IMG_9635.JPG',
+  '/Images/Customers/IMG_9638.JPG',
+  '/Images/Customers/IMG_9639.JPG',
+  '/Images/Customers/IMG_9641.JPG',
+  '/Images/Customers/IMG_9642.JPG',
+  '/Images/Customers/IMG_9643.JPG',
+  '/Images/Customers/IMG_9644.JPG',
+  '/Images/Customers/IMG_9645.JPG',
+  '/Images/Customers/IMG_9647.JPG',
+  '/Images/Customers/IMG_9649.JPG',
+  '/Images/Customers/IMG_9652.JPG',
+  '/Images/Customers/IMG_9653.JPG',
+  '/Images/Customers/IMG_9670.JPG',
+  '/Images/Customers/IMG_9672.JPG',
+  '/Images/Customers/IMG_9673.JPG',
+  '/Images/Customers/IMG_9678.JPG',
+  '/Images/Customers/IMG_9680.JPG',
+  '/Images/Customers/IMG_9681.JPG',
+  '/Images/Customers/IMG_9682.JPG',
+  '/Images/Customers/IMG_9684.JPG',
+  '/Images/Customers/IMG_9686.JPG',
+  '/Images/Customers/IMG_9695.JPG',
+  '/Images/Customers/IMG_9699.JPG',
+  '/Images/Customers/IMG_9703.JPG',
+  '/Images/Customers/IMG_9706.JPG',
+  '/Images/Customers/IMG_9708.JPG',
+  '/Images/Customers/IMG_9714.JPG',
+  '/Images/Customers/IMG_9715.JPG',
+  '/Images/Customers/IMG_9720.JPG',
+  '/Images/Customers/IMG_9722.JPG',
+  '/Images/Customers/new1.jpg',
+  '/Images/Customers/new3.jpg',
+  '/Images/Customers/new4.jpg',
+  '/Images/Customers/new5.jpg',
+  '/Images/Customers/new6.jpg',
+  '/Images/Customers/new7.jpg',
+  '/Images/Customers/new8.jpg',
+  '/Images/Customers/new9.jpg',
 ];
 
 // Split images for two rows
-const row1 = CUSTOMER_IMAGES.slice(0, 8);
-const row2 = CUSTOMER_IMAGES.slice(8);
+const midpoint = Math.ceil(CUSTOMER_IMAGES.length / 2);
+const row1 = CUSTOMER_IMAGES.slice(0, midpoint);
+const row2 = CUSTOMER_IMAGES.slice(midpoint);
 
 export default function CustomerMarquee() {
   return (
@@ -40,10 +95,10 @@ export default function CustomerMarquee() {
         <div className="absolute top-0 bottom-0 right-0 w-32 md:w-64 bg-gradient-to-l from-bg-primary to-transparent z-20 pointer-events-none" />
 
         {/* Row 1 - Moving Left */}
-        <MarqueeRow images={row1} direction="left" speed={40} />
+        <MarqueeRow images={row1} direction="left" speed={100} />
         
         {/* Row 2 - Moving Right */}
-        <MarqueeRow images={row2} direction="right" speed={45} />
+        <MarqueeRow images={row2} direction="right" speed={100} />
       </div>
     </div>
   );
@@ -66,7 +121,7 @@ function MarqueeRow({ images, direction, speed }: { images: string[], direction:
           ease: "linear",
           duration: speed,
         }}
-        className="flex gap-6 md:gap-8 hover:[animation-play-state:paused] will-change-transform"
+        className="flex gap-4 hover:[animation-play-state:paused] will-change-transform"
         style={{ width: "fit-content" }}
       >
         {duplicatedImages.map((src, i) => (
@@ -83,15 +138,15 @@ function ImageCard({ src, index }: { src: string, index: number }) {
   
   return (
     <div 
-      className={`relative h-48 sm:h-64 md:h-96 w-[200px] sm:w-[280px] md:w-[400px] shrink-0 group perspective-1000 ${rotation} hover:rotate-0 hover:z-30 transition-all duration-500`}
+      className={`relative h-40 sm:h-52 md:h-64 w-[160px] sm:w-[200px] md:w-[240px] shrink-0 group perspective-1000 ${rotation} hover:rotate-0 hover:z-30 transition-all duration-500`}
     >
-      <div className="absolute inset-0 bg-white/5 rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] border border-white/10 shadow-2xl overflow-hidden group-hover:border-accent/30 transition-colors duration-500 will-change-transform">
+      <div className="absolute inset-0 bg-white/5 rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden group-hover:border-accent/30 transition-colors duration-500 will-change-transform">
         
         <Image 
           src={src} 
           alt="EcoVista Community Member" 
           fill
-          sizes="(max-width: 768px) 280px, 400px"
+          sizes="(max-width: 768px) 200px, 240px"
           quality={75}
           loading="lazy"
           className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"

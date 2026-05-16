@@ -1,8 +1,19 @@
 export const CHAPTERS = [
   {
+    id: 'grand-opening',
+    title: 'The Grand Opening',
+    subtitle: 'Chapter 01',
+    description: 'A morning of anticipation and elegance. The event began with the ceremonial ribbon cutting and the lighting of the lamp, marking the official grand launch of our vision.',
+    images: [
+      '/Images/Family Fest/beginning/beginnning-1.jpg',
+      '/Images/Family Fest/beginning/beginnning-2.jpg',
+      '/Images/Family Fest/beginning/beginnning-3.jpg',
+    ]
+  },
+  {
     id: 'beginning',
     title: 'The Vision & The Team',
-    subtitle: 'Chapter 01',
+    subtitle: 'Chapter 02',
     description: 'Every great celebration starts with a dedicated team. Our staff worked tirelessly behind the scenes to transform our community space into a festive wonderland for all families.',
     images: [
       '/Images/Family Fest/team/IMG_0050.JPG',
@@ -21,7 +32,7 @@ export const CHAPTERS = [
   {
     id: 'dance',
     title: 'Rhythm of the Night',
-    subtitle: 'Chapter 02',
+    subtitle: 'Chapter 03',
     description: 'The energy shifted as the stage came alive. From traditional forms to contemporary beats, our community members showcased their talent and passion through dance.',
     images: [
       '/Images/Family Fest/dance/IMG_0003.JPG',
@@ -46,7 +57,7 @@ export const CHAPTERS = [
   {
     id: 'magic',
     title: 'A Touch of Magic',
-    subtitle: 'Chapter 03',
+    subtitle: 'Chapter 04',
     description: 'Gasping in awe and laughing in delight—the magic show captivated everyone. It was a time where wonder knew no bounds, and even the adults felt like children again.',
     images: [
       '/Images/Family Fest/magic show/IMG_9870.JPG',
@@ -96,7 +107,7 @@ export const CHAPTERS = [
   {
     id: 'winners',
     title: 'Celebrating Excellence',
-    subtitle: 'Chapter 04',
+    subtitle: 'Chapter 05',
     description: 'The most anticipated moment. We honoured the brilliance and sportsmanship of our community, handing out prizes that represented more than just a win—they represented unity.',
     images: [
       '/Images/Family Fest/Price.JPG',
@@ -115,7 +126,7 @@ export const CHAPTERS = [
   {
     id: 'feedback',
     title: 'Happy Hearts & Families',
-    subtitle: 'Chapter 05',
+    subtitle: 'Chapter 06',
     description: 'The fest concluded with smiles that spoke louder than words. Hearing our customers share their joy was the perfect ending to an unforgettable day of community spirit.',
     images: [
       '/Images/Family Fest/customer feedback/IMG_0032.JPG',

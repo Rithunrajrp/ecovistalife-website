@@ -223,12 +223,12 @@ export default function FestPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-bg-primary/40 to-bg-primary z-10" />
           <img 
             src="/Images/Family Fest/Background.JPG" 
-            alt="Family Fest" 
+            alt="Family Fest & Grand Launch" 
             className="w-full h-full object-cover"
           />
         </motion.div>
         
-        <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl">
+        <div className="relative z-20 text-center px-4 sm:px-6 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -237,8 +237,8 @@ export default function FestPage() {
             <span className="text-accent uppercase tracking-[0.5em] text-sm font-bold mb-8 block">
               The Grand Event
             </span>
-            <h1 className="font-heading text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 sm:mb-8 text-white leading-tight">
-              Family <span className="text-transparent stroke-text">Fest</span>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 text-white leading-tight">
+              Family Fest & <br className="sm:hidden" /> <span className="text-transparent stroke-text">Grand Launch</span>
             </h1>
             <p className="text-text-secondary text-base sm:text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
               Experience the story of community, joy, and togetherness. A visual journey through the moments that define EcoVistaLife.

@@ -76,7 +76,7 @@ export default function AboutClient() {
             <div className="aspect-[4/5] sm:aspect-[4/5] w-full rounded-2xl sm:rounded-[2rem] overflow-hidden group">
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700 z-10" />
               <img 
-                src="/Images/stock/property_developers.png" 
+                src="/Images/stock/about.jpg" 
                 alt="EcoVistaLife Architecture" 
                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
               />
@@ -266,7 +266,7 @@ export default function AboutClient() {
           >
             {TEAM.map((member, i) => (
               <motion.div 
-                key={i}
+                key={i} 
                 variants={itemVariants}
                 className="group cursor-pointer"
               >
@@ -279,6 +279,68 @@ export default function AboutClient() {
                     className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000"
                   />
                 </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </SectionWrapper>
+
+      {/* Rewards & Recognition Section */}
+      <SectionWrapper className="py-32 bg-bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-24">
+            <span className="text-accent uppercase tracking-[0.4em] text-xs font-bold mb-4 block">Employee Excellence</span>
+            <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold tracking-tighter">Honouring Our People.</h2>
+            <p className="text-white/40 max-w-xl mx-auto mt-6 text-sm leading-relaxed">
+              We celebrate the dedication, innovation, and hard work of the individuals who bring the EcoVistaLife vision to life every single day.
+            </p>
+          </div>
+
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.1 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {[
+              { 
+                title: 'Visionary Leadership Award', 
+                year: 'Annual Meet',
+                org: 'Corporate Excellence',
+                image: '/Images/awards/trophy-portrait-1.png',
+                desc: 'Honouring the strategic vision and leadership that drives our commitment to sustainable luxury and ethical growth.'
+              },
+              { 
+                title: 'Rock Star Performer', 
+                year: 'Quarterly Honors',
+                org: 'Civil & Engineering',
+                image: '/Images/awards/trophy-landscape-1.png',
+                desc: 'Recognizing outstanding dedication on-site and uncompromising quality in every brick laid and plot developed.'
+              },
+              { 
+                title: 'The Maverick Award', 
+                year: 'Special Recognition',
+                org: 'Innovation & Strategy',
+                image: '/Images/awards/trophy-landscape-2.png',
+                desc: 'Celebrating those who push boundaries, think differently, and bring innovative solutions to the real estate landscape.'
+              }
+            ].map((award, i) => (
+              <motion.div 
+                key={i}
+                variants={itemVariants}
+                className="group bg-white/5 border border-white/5 rounded-2xl sm:rounded-3xl p-8 hover:bg-white/10 transition-all duration-500"
+              >
+                <div className="aspect-[4/5] w-full mb-8 overflow-hidden rounded-xl bg-black/20 flex items-center justify-center p-6 sm:p-10">
+                  <img 
+                    src={award.image} 
+                    alt={award.title} 
+                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <span className="text-accent font-mono text-[10px] tracking-widest uppercase mb-2 block">{award.year} • {award.org}</span>
+                <h3 className="font-heading text-xl font-bold mb-4 group-hover:text-accent transition-colors">{award.title}</h3>
+                <p className="text-white/40 text-sm leading-relaxed font-light">{award.desc}</p>
               </motion.div>
             ))}
           </motion.div>

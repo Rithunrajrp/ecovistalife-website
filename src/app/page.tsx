@@ -6,6 +6,7 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import VisionMission from '@/components/VisionMission';
 import CustomerMarquee from '@/components/CustomerMarquee';
+import { LandscapeTestimonials, PortraitTestimonials } from '@/components/TestimonialVideos';
 import HomeFAQs from '@/components/HomeFAQs';
 import HomeCTA from '@/components/HomeCTA';
 
@@ -63,8 +64,14 @@ export default function Home() {
       />
 
       <FeaturedProjects />
+      
       <VisionMission />
+
+      <LandscapeTestimonials />
+
       <HomeSections stats={STATS} features={FEATURES} testimonials={TESTIMONIALS} />
+
+      <PortraitTestimonials />
 
       <CustomerMarquee />
 
