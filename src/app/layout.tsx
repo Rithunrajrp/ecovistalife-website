@@ -7,6 +7,7 @@ import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import JsonLd from "@/components/JsonLd";
 import LoadingScreen from "@/components/ui/LoadingScreen";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -116,6 +117,7 @@ export default function RootLayout({
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
+        <WhatsAppButton />
       </body>
     </html>
   );
