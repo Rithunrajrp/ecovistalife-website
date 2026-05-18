@@ -7,22 +7,22 @@ import { cn } from '@/lib/utils';
 
 const LANDSCAPE_VIDEOS = [
   {
-    url: '/testimonial video/testimonial-video-landscape-1.mp4',
+    url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-landscape-1.mp4',
     title: 'Transforming Lives through Quality Housing',
     author: 'Happy Homeowner'
   },
   {
-    url: '/testimonial video/testimonial-video-landscape-2.mp4',
+    url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-landscape-2.mp4',
     title: 'A Seamless Journey to Our Dream Villa',
     author: 'Satisfied Client'
   },
 ];
 
 const PORTRAIT_VIDEOS = [
-  { url: '/testimonial video/testimonial-video-portrait-1.mp4', author: 'Community Member 1' },
-  { url: '/testimonial video/testimonial-video-portrait-2.mp4', author: 'Community Member 2' },
-  { url: '/testimonial video/testimonial-video-portrait-3.mp4', author: 'Community Member 3' },
-  { url: '/testimonial video/testimonial-video-portrait-4.mp4', author: 'Community Member 4' },
+  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-1.mp4', author: 'Community Member 1' },
+  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-2.mp4', author: 'Community Member 2' },
+  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-3.mp4', author: 'Community Member 3' },
+  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-4.mp4', author: 'Community Member 4' },
 ];
 
 export function LandscapeTestimonials() {

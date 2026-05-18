@@ -13,12 +13,12 @@ export default function LoadingScreen() {
 
     // Video Assets to Preload
     const VIDEO_ASSETS = [
-      '/testimonial video/testimonial-video-landscape-1.mp4',
-      '/testimonial video/testimonial-video-landscape-2.mp4',
-      '/testimonial video/testimonial-video-portrait-1.mp4',
-      '/testimonial video/testimonial-video-portrait-2.mp4',
-      '/testimonial video/testimonial-video-portrait-3.mp4',
-      '/testimonial video/testimonial-video-portrait-4.mp4',
+      'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-landscape-1.mp4',
+      'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-landscape-2.mp4',
+      'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-1.mp4',
+      'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-2.mp4',
+      'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-3.mp4',
+      'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-4.mp4',
     ];
 
     // Prefetch videos

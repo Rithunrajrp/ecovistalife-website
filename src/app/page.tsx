@@ -18,9 +18,8 @@ const STATS = [
 ];
 
 const HERO_IMAGES = [
-  '/Images/hero/banner1.jpeg',
-  '/Images/hero/banner2.jpeg',
-  '/Images/hero/banner3.jpeg',
+  '/images/hero_bg_mint.png',
+  '/images/hero_bg_sky.png',
 ];
 
 const FEATURES = [
@@ -61,6 +60,7 @@ export default function Home() {
         body="Invest in a legacy of sustainable luxury. We create high-appreciation gated communities and premium villa plots across Coimbatore, Karamadai and Sulur."
         images={HERO_IMAGES}
         buttons={[{ text: 'Explore Portfolio', href: '/projects' }]}
+        scrollReveal={true}
       />
 
       <FeaturedProjects />

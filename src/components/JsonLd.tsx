@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "@/data/socials";
+
 export default function JsonLd() {
   const SITE_URL = "https://ecovistalife.in";
 
@@ -50,10 +52,7 @@ export default function JsonLd() {
         closes: "18:30",
       },
     ],
-    sameAs: [
-      "https://www.instagram.com/ecovistalife/",
-      "https://www.facebook.com/ecovistalife/",
-    ],
+    sameAs: SOCIAL_LINKS.map(link => link.url),
     priceRange: "₹₹₹",
   };
 

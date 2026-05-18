@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { SOCIAL_LINKS } from '@/data/socials';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -160,6 +161,24 @@ export default function Navbar() {
               >
                 <p>+91 97877 95555</p>
                 <p>info@ecovistalife.com</p>
+                
+                <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-white/5">
+                  {SOCIAL_LINKS.map((social) => {
+                    const Icon = social.icon;
+                    return (
+                      <a 
+                        key={social.name} 
+                        href={social.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-white/40 hover:text-accent transition-colors"
+                        aria-label={social.name}
+                      >
+                        <Icon size={20} />
+                      </a>
+                    );
+                  })}
+                </div>
               </motion.div>
             </div>
           </motion.div>

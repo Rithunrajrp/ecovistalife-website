@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { SOCIAL_LINKS } from "@/data/socials";
 
 interface FooterProps {
   heading?: string;
@@ -79,6 +80,25 @@ export default function Footer({
         
         <div className="pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-text-secondary">
           <p>© {new Date().getFullYear()} ECOVISTALIFE. All rights reserved.</p>
+          
+          <div className="flex items-center gap-4">
+            {SOCIAL_LINKS.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a 
+                  key={social.name} 
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-text-secondary hover:text-accent transition-colors"
+                  aria-label={social.name}
+                >
+                  <Icon size={18} />
+                </a>
+              );
+            })}
+          </div>
+
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
