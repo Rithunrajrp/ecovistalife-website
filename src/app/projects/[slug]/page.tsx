@@ -98,7 +98,7 @@ const FALLBACK_PROJECTS: Record<string, any> = {
     location: 'Sulur, Coimbatore',
     plotSizes: '1,500 – 3,500 sq ft',
     priceRange: 'starting from 12.49L',
-    video: 'https://ik.imagekit.io/bgvtzewqf/ecovista/frenchville.mp4',
+    video: 'https://drive.google.com/uc?export=download&id=1Scj66Wo_6tE0WlXUFg6T6EI8rDSVohOW',
     endImage: '/Images/French Ville/frenchville_bg.jpeg',
     brochure: '/brochure/FrenchVilla.pdf',
   },

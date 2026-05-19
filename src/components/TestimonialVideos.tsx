@@ -7,22 +7,22 @@ import { cn } from '@/lib/utils';
 
 const LANDSCAPE_VIDEOS = [
   {
-    url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-landscape-1.mp4',
+    url: '/api/video?id=14tX45ogCte2IVjYE1MpZbNW8d6HojZHk',
     title: 'Transforming Lives through Quality Housing',
     author: 'Happy Homeowner'
   },
   {
-    url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-landscape-2.mp4',
+    url: '/api/video?id=1yagHW5zezq7A2-zhrz1qhinSyaeODOsI',
     title: 'A Seamless Journey to Our Dream Villa',
     author: 'Satisfied Client'
   },
 ];
 
 const PORTRAIT_VIDEOS = [
-  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-1.mp4', author: 'Community Member 1' },
-  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-2.mp4', author: 'Community Member 2' },
-  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-3.mp4', author: 'Community Member 3' },
-  { url: 'https://ik.imagekit.io/bgvtzewqf/ecovista/testimonial-video-portrait-4.mp4', author: 'Community Member 4' },
+  { url: '/api/video?id=1S9K-f8MDmtWsCe6LmDYMmbe42wYEaZ24', author: 'Community Member 1' },
+  { url: '/api/video?id=1TdfSGr5TOqBvM8eB9UXWLCBS9aT3O_qn', author: 'Community Member 2' },
+  { url: '/api/video?id=1U3ah5lGpsAxnbZrXrEBgdR95xmwsvHvI', author: 'Community Member 3' },
+  { url: '/api/video?id=1InaaCT30aw1xw2ZNPvskWPnV3JV4sV7y', author: 'Community Member 4' },
 ];
 
 export function LandscapeTestimonials() {
@@ -156,43 +156,63 @@ function PortraitCard({ video, index, onOpen }: { video: typeof PORTRAIT_VIDEOS[
 function VideoModal({ url, onClose }: { url: string, onClose: () => void }) {
   const [muted, setMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const isPortrait = url.toLowerCase().includes('portrait');
+  const isPortrait = url.toLowerCase().includes('portrait') || url.includes('1S9K') || url.includes('1Tdf') || url.includes('1U3a') || url.includes('1Ina');
+
+  // Extract ID from /api/video?id=...
+  let driveId = null;
+  if (url.includes('id=')) {
+    try {
+      driveId = new URL(url, 'http://localhost').searchParams.get('id');
+    } catch (e) {}
+  }
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-8"
+      className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-10"
       onClick={onClose}
     >
+      <motion.button
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white text-2xl hover:bg-white/20 transition-all z-10"
+        onClick={onClose}
+      >
+        ✕
+      </motion.button>
+      
       <motion.div 
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
+        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.9, y: 20 }}
         className={cn(
-          "relative bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10",
-          isPortrait ? "h-[80vh] sm:h-[85vh] aspect-[9/16]" : "w-full max-w-5xl aspect-video"
+          "relative bg-black rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10",
+          isPortrait ? "h-[80vh] sm:h-[85vh] aspect-[9/16]" : "w-full max-w-6xl aspect-video"
         )}
         onClick={e => e.stopPropagation()}
       >
-        <video 
-          ref={videoRef}
-          src={url}
-          className="w-full h-full object-contain"
-          autoPlay
-          controls={false}
-          muted={muted}
-          onEnded={onClose}
-        />
-        <div className="absolute top-6 right-6 flex items-center gap-4">
-          <button onClick={() => setMuted(!muted)} className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all">
-            {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-          </button>
-          <button onClick={onClose} className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform">
-            <X size={24} />
-          </button>
-        </div>
+        {driveId ? (
+          <iframe
+            className="w-full h-full"
+            src={`https://drive.google.com/file/d/${driveId}/preview`} 
+            title="Video Presentation"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <video 
+            ref={videoRef}
+            src={url}
+            className="w-full h-full object-contain"
+            autoPlay
+            controls
+            muted={muted}
+            onEnded={onClose}
+          />
+        )}
       </motion.div>
     </motion.div>
   );

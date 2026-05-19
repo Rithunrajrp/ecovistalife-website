@@ -17,6 +17,15 @@
   100% { transform: translateX(calc(-50% - 0.75rem)); } /* -50% to shift halfway through the doubled list, plus account for the gap */
 }
 
+@keyframes pan-bg {
+  0% { object-position: 0% 50%; }
+  100% { object-position: 100% 50%; }
+}
+
+.animate-pan-bg {
+  animation: pan-bg 10s linear forwards;
+}
+
 /* Premium Construction Design System */
 :root {
   --color-bg-primary: #0a0a0a;

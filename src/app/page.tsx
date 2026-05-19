@@ -18,8 +18,8 @@ const STATS = [
 ];
 
 const HERO_IMAGES = [
-  '/images/hero_bg_mint.png',
-  '/images/hero_bg_sky.png',
+  'https://ik.imagekit.io/bgvtzewqf/ecovista/images/ChatGPT%20Image%20May%2018,%202026,%2011_21_28%20PM.png',
+  'https://ik.imagekit.io/bgvtzewqf/ecovista/images/ChatGPT%20Image%20May%2018,%202026,%2011_19_16%20PM.png',
 ];
 
 const FEATURES = [

@@ -26,7 +26,7 @@ export default function Hero({ heading, body, image, images, buttons, showFloati
     if (bannerImages.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % bannerImages.length);
-    }, 7000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [bannerImages.length]);
 
@@ -84,15 +84,19 @@ export default function Hero({ heading, body, image, images, buttons, showFloati
             {bannerImages.map((img, idx) => (
               <motion.img 
                 key={img}
-                initial={false}
+                initial={{ opacity: 0 }}
                 animate={{ 
                   opacity: currentIndex === idx ? 1 : 0,
-                  scale: currentIndex === idx ? 1.0 : 1.05
                 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ 
+                  opacity: { duration: 1.5, ease: "easeInOut" },
+                }}
                 src={img} 
                 alt={`Hero Background ${idx + 1}`} 
-                className="absolute inset-0 w-full h-full object-contain"
+                className={cn(
+                  "absolute inset-0 w-full h-full object-cover",
+                  currentIndex === idx ? "animate-pan-bg" : "object-[0%_50%]"
+                )}
               />
             ))}
           </motion.div>
