@@ -66,7 +66,7 @@ export default function CampaignPopup() {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-4xl bg-bg-secondary border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+            className="relative w-full max-w-7xl bg-bg-secondary border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[95vh] md:min-h-[650px]"
           >
             <button 
               onClick={() => setIsOpen(false)}
@@ -76,17 +76,17 @@ export default function CampaignPopup() {
             </button>
 
             {/* Image Section */}
-            <div className="w-full md:w-1/2 relative h-64 md:h-auto flex-shrink-0 bg-black">
+            <div className="w-full md:w-[55%] relative h-96 md:h-auto flex-shrink-0 bg-black">
               <img 
                 src="https://ik.imagekit.io/bgvtzewqf/ecovista/images/PHOTO-2026-05-18-18-08-17.jpg?updatedAt=1779124640258"
                 alt="Campaign"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg-secondary to-transparent md:hidden" />
             </div>
 
             {/* Form Section */}
-            <div className="w-full md:w-1/2 p-6 sm:p-10 flex flex-col justify-center overflow-y-auto no-scrollbar">
+            <div className="w-full md:w-[45%] p-6 sm:p-10 flex flex-col justify-center overflow-y-auto no-scrollbar">
               <span className="text-accent text-xs font-mono uppercase tracking-[0.3em] mb-4 block">Special Offer</span>
               <h2 className="text-white font-heading text-2xl sm:text-3xl font-bold mb-2">Register Your Interest</h2>
               <p className="text-white/40 text-sm mb-8">Please provide your details below and our team will get in touch with you shortly.</p>
