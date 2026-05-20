@@ -18,8 +18,8 @@
 }
 
 @keyframes pan-bg {
-  0% { object-position: 0% 50%; }
-  100% { object-position: 100% 50%; }
+  0% { transform: scale(1.05) translateX(1%); }
+  100% { transform: scale(1.05) translateX(-1%); }
 }
 
 .animate-pan-bg {

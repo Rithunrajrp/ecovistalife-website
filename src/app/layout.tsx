@@ -6,7 +6,6 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import JsonLd from "@/components/JsonLd";
-import LoadingScreen from "@/components/ui/LoadingScreen";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CampaignPopup from "@/components/CampaignPopup";
 
@@ -112,7 +111,6 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body>
-        <LoadingScreen />
         <CustomCursor />
         <Navbar />
         <SmoothScrollProvider>
