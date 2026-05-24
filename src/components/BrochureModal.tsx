@@ -31,7 +31,8 @@ export default function BrochureModal({ isOpen, onClose, brochureUrl, projectNam
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          projectName
+          projectName,
+          location: "Coimbatore"
         }),
       });
 

@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import AmenityCard from '@/components/AmenityCard';
 import BrochureModal from '@/components/BrochureModal';
+import EnquiryModal from '@/components/EnquiryModal';
 
 const PROJECT_FAQS = [
   { q: "Are the properties DTCP/RERA approved?", a: "Yes, all our projects are fully approved by DTCP and RERA, ensuring clear titles and secure investments." },
@@ -96,17 +97,20 @@ interface ProjectClientProps {
   video?: string;
   endImage?: string;
   brochure?: string;
+  videoModalUrl?: string;
 }
 
 export default function ProjectClient({
   title, description, content, images,
   status = 'Published', location, plotSizes, priceRange,
-  video, endImage, brochure,
+  video, endImage, brochure, videoModalUrl,
 }: ProjectClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const [videoEnded, setVideoEnded] = useState(false);
   const [isBrochureOpen, setIsBrochureOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -323,9 +327,9 @@ export default function ProjectClient({
                   </div>
 
                   <div className="space-y-4">
-                    <Link href="/contact" className="block">
-                      <MagneticButton className="w-full py-6 text-lg">Enquire Now</MagneticButton>
-                    </Link>
+                    <MagneticButton onClick={() => setIsEnquiryOpen(true)} className="w-full py-6 text-lg">
+                      Enquire Now
+                    </MagneticButton>
                     
                     {brochure && (
                       <button 
@@ -334,6 +338,17 @@ export default function ProjectClient({
                       >
                         <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                         Download Brochure
+                      </button>
+                    )}
+                    {videoModalUrl && (
+                      <button 
+                        onClick={() => setIsVideoOpen(true)}
+                        className="flex items-center justify-center gap-3 w-full py-5 rounded-full border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-all text-sm font-bold uppercase tracking-widest group"
+                      >
+                        <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent group-hover:text-black transition-all">
+                          <span className="text-[10px] ml-0.5">▶</span>
+                        </div>
+                        Watch Video
                       </button>
                     )}
                   </div>
@@ -423,6 +438,51 @@ export default function ProjectClient({
         projectName={title}
         brochureUrl={brochure || ''}
       />
+
+      <EnquiryModal 
+        isOpen={isEnquiryOpen}
+        onClose={() => setIsEnquiryOpen(false)}
+        projectName={title}
+      />
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoOpen && videoModalUrl && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 sm:p-10"
+            onClick={() => setIsVideoOpen(false)}
+          >
+            <motion.button
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white text-2xl hover:bg-white/20 transition-all z-10"
+              onClick={() => setIsVideoOpen(false)}
+            >
+              ✕
+            </motion.button>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-6xl aspect-video rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl bg-black border border-white/10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                className="w-full h-full"
+                src={videoModalUrl}
+                title={`${title} Presentation`}
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Project FAQs Section */}
       <SectionWrapper className="bg-bg-primary pt-0 overflow-hidden">

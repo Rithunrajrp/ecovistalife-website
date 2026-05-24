@@ -32,6 +32,8 @@ export default function ContactClient() {
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      projectname: 'General Enquiry',
+      location: 'Coimbatore'
     };
 
     try {

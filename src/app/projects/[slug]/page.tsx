@@ -37,6 +37,7 @@ const FALLBACK_PROJECTS: Record<string, any> = {
     location: 'Ganeshapuram, Coimbatore',
     plotSizes: '1,200 – 5,000 sq ft',
     priceRange: '₹5.5L – ₹35L',
+    videoModalUrl: 'https://drive.google.com/file/d/1tRMoXxBZZUE07JggJ6UKmtHPh02XEPYZ/preview',
   },
   'mount-shadows': {
     title: 'Mount Shadows',
@@ -67,6 +68,7 @@ const FALLBACK_PROJECTS: Record<string, any> = {
     plotSizes: '2,000 – 4,500 sq ft',
     priceRange: '₹10.49L / cent & 2 BHK Villas from ₹49L Onwards',
     brochure: '/brochure/mount shadows.pdf',
+    videoModalUrl: 'https://drive.google.com/file/d/1nour6fCVGbe22wh4xgqnRTNlY7e63YVm/preview',
   },
   frenchville: {
     title: 'Frenchville',
@@ -196,6 +198,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       video={project.video}
       endImage={project.endImage}
       brochure={project.brochure}
+      videoModalUrl={project.videoModalUrl}
     />
   );
 }

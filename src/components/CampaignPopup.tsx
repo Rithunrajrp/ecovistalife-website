@@ -34,7 +34,9 @@ export default function CampaignPopup() {
           name: formData.name,
           email: formData.email,
           phone: `${formData.countryCode} ${formData.phone}`,
-          message: "Campaign Enquiry"
+          message: "Campaign Enquiry",
+          projectname: "Campaign Offer",
+          location: "Coimbatore"
         }),
       });
 
